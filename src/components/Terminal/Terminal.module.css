@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+.terminal {
+  width: 400px;
+  height: 200px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.terminal_toolbar {
+  background: linear-gradient(#504b45 0%, #3c3b37 100%);
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.toolbar_buttons {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar_button {
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0;
+  font-size: 7px;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 1px 0px #41403a, 0px 1px 1px 0px #474642;
+  border: none;
+  margin-right: 4px;
+}
+.toolbar_button:hover {
+  cursor: pointer;
+}
+.toolbar_button_exit {
+  background: #f25d2b;
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+  background-clip: padding-box;
+}
+.toolbar_button:focus {
+  outline: none;
+}
+
+.toolbar_user {
+  color: #d5d0ce;
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 1px;
+}
+.terminal_body {
+  background: rgba(56, 4, 40, 0.9);
+  height: calc(100% - 25px);
+  margin-top: -1px;
+  padding-top: 2px;
+  font-family: "Ubuntu mono";
+}
+.terminal_text {
+  color: #ddd;
+}
+
+.terminal_prompt {
+  margin-top: 10px;
+  display: flex;
+}
+
+.prompt_user {
+  color: #87d441;
+}
+.prompt_location {
+  color: #6d85a9;
+}
+.prompt_dollar {
+  color: #ddd;
+}
+.prompt_cursor {
+  height: 17px;
+  width: 8px;
+  background: white;
+  display: block;
+  margin-left: 8px;
+  animation: 2000ms ease infinite alternate blink;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .terminal {
+    max-height: 90%;
+    width: 95%;
+  }
+}

@@ -1,0 +1,79 @@
+/* font-family: 'Source Code Pro', monospace; */
+
+:root {
+  --blue: #1f63eb;
+  --green: #34c460;
+  --red: #ef4444;
+}
+
+:root {
+  --bg-color: #121212;
+  --typewriterSpeed: 1s;
+  --typewriterCharacters: 24;
+}
+
+.writer_container {
+  /* font-family: "Source Code Pro", monospace; */
+  font-family: "Fira Code", monospace;
+  color: white;
+  font-size: 14px;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: var(--mb-2) 0;
+  visibility: hidden;
+}
+
+.first_line > span:nth-child(1) {
+  color: var(--blue);
+}
+
+.first_line > span:nth-child(2) {
+  color: var(--green);
+}
+
+.second_line > span,
+.third_line > span {
+  color: var(--red);
+}
+
+.writer_container > p {
+  position: relative;
+}
+
+.writer_container > p::before,
+.writer_container > p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.writer_container > p::before {
+  background: var(--bg-color);
+}
+
+.writer_container > p:nth-child(1):before {
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 2s forwards;
+}
+
+.writer_container > p:nth-child(2)::before {
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 3s forwards;
+}
+
+.writer_container > p:nth-child(3)::before {
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 4s forwards;
+}
+.writer_container > p:nth-child(4)::before {
+  animation: typewriter 0.2s steps(var(--typewriterCharacters)) 5s forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}

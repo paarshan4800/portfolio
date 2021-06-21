@@ -1,0 +1,21 @@
+.button {
+  width: min-content;
+  padding: var(--mb-1) var(--mb-2);
+  background-color: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 40px 40px var(--secondary) inset;
+  color: #fff;
+}
+
+.button:focus {
+  outline: 0;
+}

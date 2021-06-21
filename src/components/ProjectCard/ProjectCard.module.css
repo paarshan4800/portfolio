@@ -1,0 +1,48 @@
+.project_card {
+}
+
+.project_card > h4 {
+  margin: var(--mb-1) 0px;
+}
+
+.project_card > p {
+  margin: var(--mb-1) 0px;
+  font-size: 14px;
+}
+
+.previewImg {
+  height: 150px;
+  width: 100%;
+}
+
+.tech_badges {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: var(--mb-2) 0px;
+}
+
+.project_link {
+  font-size: 1.5rem;
+  margin-right: var(--mb-2);
+}
+
+.project_link:hover {
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+/* Both Tablet and Mobile */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Tablet only */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile only */
+@media only screen and (max-width: 767px) {
+}
