@@ -36,6 +36,10 @@
   color: var(--red);
 }
 
+.fourth_line {
+  text-align: left !important;
+}
+
 .writer_container > p {
   position: relative;
 }

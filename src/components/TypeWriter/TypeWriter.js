@@ -18,7 +18,7 @@ const TypeWriter = forwardRef((props, ref) => {
       <p className={`${styles.third_line}`}>
         <span>Sugar</span>, <span>Spice</span>, ...<span>everythingNice</span>,
       </p>
-      <p>];</p>
+      <p className={`${styles.fourth_line}`}>];</p>
     </div>
   );
 });

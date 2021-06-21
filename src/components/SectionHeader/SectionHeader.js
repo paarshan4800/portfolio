@@ -1,8 +1,8 @@
 import styles from "./SectionHeader.module.css";
 import { SECTIONS } from "../../data/Sections";
-import React from "react";
+import React, { forwardRef } from "react";
 
-function SectionHeader({ name }) {
+const SectionHeader = (props) => {
   const sections = {
     profile: 0,
     experience: 1,
@@ -14,18 +14,14 @@ function SectionHeader({ name }) {
     contact: 7,
   };
 
-  const iconStyle = {
-    color: "blue",
-  };
-
-  const { title, icon } = SECTIONS[sections[name]];
+  const { title, icon } = SECTIONS[sections[props.name]];
   return (
-    <header className={`${styles.header}`}>
+    <header className={`${styles.header} fadeIn`}>
       <p className={`${styles.text}`}>
         {icon}&nbsp;{title}
       </p>
     </header>
   );
-}
+};
 
 export default SectionHeader;

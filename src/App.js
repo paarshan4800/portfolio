@@ -1,5 +1,4 @@
 import { useState, createContext, useRef, useEffect } from "react";
-
 import "./App.css";
 
 import Landing from "./sections/Landing/Landing";
@@ -13,7 +12,7 @@ import TypeWriter from "./components/TypeWriter/TypeWriter";
 
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes";
-import { gsap } from "gsap";
+import { gsap, Power3 } from "gsap";
 const StyledApp = styled.div``;
 
 export const ThemeToggler = createContext();
