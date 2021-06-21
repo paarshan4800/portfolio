@@ -4,7 +4,7 @@ import NameHeader from "../../components/NameHeader/NameHeader";
 import React, { useRef, useEffect } from "react";
 import TypeWriter from "../../components/TypeWriter/TypeWriter";
 
-import { gsap } from "gsap";
+import { gsap, Power3 } from "gsap";
 
 function Landing() {
   let imageRef = useRef(null);
@@ -16,25 +16,37 @@ function Landing() {
 
   useEffect(() => {
     writerRef.current.style.visibility = "hidden";
+
     // Image
     timeline.from(imageRef, {
       duration: 1,
       opacity: 0,
+      ease: Power3.easeOut,
     });
-    // console.log("test");
+
     // Name
     timeline.from(nameRef.current, {
       duration: 0.8,
       opacity: 0,
+      ease: Power3.easeOut,
     });
 
     //
     timeline.to(writerRef.current, {
       duration: 0,
+      ease: Power3.easeOut,
       css: {
         visibility: "visible",
       },
     });
+
+    // Add the animation classes to type writer lines
+    // let classNames = ["first_line", "second_line", "third_line"];
+
+    // for (let i = 0; i < writerRef.current.children.length; i++) {
+    //   writerRef.current.children[i].classList.add(classNames[i]);
+    //   console.log(writerRef.current.children[i].classList);
+    // }
 
     // Simulate Pause for writer effect to finish
     timeline.to({}, 4, {});
@@ -44,6 +56,7 @@ function Landing() {
       timeline.from(iconRefs[i], {
         duration: 0.2,
         opacity: 0,
+        ease: Power3.easeOut,
       });
     }
 

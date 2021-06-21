@@ -42,9 +42,8 @@ function App() {
             <ExperienceAndEducation />
             <Skills />
             <Projects />
-            <Contact />
             <Resume />
-            <TypeWriter />
+            <Contact />
           </div>
         </ThemeToggler.Provider>
       </StyledApp>
