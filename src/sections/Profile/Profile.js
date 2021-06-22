@@ -11,36 +11,22 @@ function Profile() {
   let threshold = 0.5;
   let imageRef = useRef(null);
 
-  const intersection = useIntersection(sectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: threshold,
-  });
-  // Animation for fading in
-  const fadeIn = (element) => {
-    gsap.to(element, {
-      duration: 0.8,
-      opacity: 1,
-      ease: Power3.easeOut,
-    });
-  };
-
-  // Animation for fading out
-  const fadeOut = (element) => {
-    gsap.to(element, {
-      duration: 0.8,
-      opacity: 0,
-      ease: Power3.easeOut,
-    });
-  };
-
   useEffect(() => {
-    // checking to see when the vieport is visible to the user
-    intersection && intersection.intersectionRatio < threshold
-      ? fadeOut(imageRef)
-      : fadeIn(imageRef);
+    gsap.from(imageRef, {
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "center 50%",
+        scrub: 0.5,
+        // markers: true,
+      },
+      duration: 1,
+      opacity: 0,
+      x: "-50vw",
+      ease: Power3.easeOut,
+    });
     return () => {};
-  }, [intersection]);
+  }, []);
 
   return (
     <section ref={sectionRef} className={`${styles.wrapper}`}>
