@@ -17,7 +17,7 @@ function Projects() {
 
     for (let i = 0; i < projectsRef.length; i++) {
       timeline.from(projectsRef[i], {
-        duration: 0.5,
+        duration: 0.8,
         opacity: 0,
         x: 100,
         ease: Power3.easeOut,
