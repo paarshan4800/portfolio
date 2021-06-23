@@ -28,7 +28,7 @@ function Skills() {
       animation: timeline,
       start: "top 80%",
       end: "75% 70%",
-      markers: true,
+      // markers: true,
       scrub: 0.5,
     });
   }, []);

@@ -1,0 +1,12 @@
+.wrapper {
+  flex-direction: column;
+}
+
+.content_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 300px));
+  justify-content: space-evenly !important;
+  /* column-gap: var(--mb-3);
+  row-gap: var(--mb-3); */
+}

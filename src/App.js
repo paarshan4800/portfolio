@@ -8,7 +8,7 @@ import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
 import Contact from "./sections/Contact/Contact";
 import Resume from "./sections/Resume/Resume";
-import TypeWriter from "./components/TypeWriter/TypeWriter";
+import ExtraCurricularAndHobbies from "./sections/ExtraCurricularAndHobbies/ExtraCurricularAndHobbies";
 
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes";
@@ -41,6 +41,7 @@ function App() {
             <ExperienceAndEducation />
             <Skills />
             <Projects />
+            <ExtraCurricularAndHobbies />
             <Resume />
             <Contact />
           </div>

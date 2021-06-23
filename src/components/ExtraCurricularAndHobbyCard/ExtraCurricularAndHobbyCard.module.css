@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+}
+
+.title {
+  font-weight: 800;
+  margin: var(--mb-2) 0;
+}
+
+.card > ul {
+  width: 80%;
+  list-style-type: disc;
+  text-align: left;
+}
+
+.description {
+  font-size: 14px;
+  margin: var(--mb-1) 0;
+}
+
+.icon_box {
+  width: 80%;
+  text-align: left;
+  margin: var(--mb-2) 0;
+  font-size: 1.5rem;
+}
+
+.icon {
+  cursor: pointer;
+  color: #1db954;
+  transition: 0.2s all;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

@@ -1,45 +1,42 @@
 import styles from "./ProjectCard.module.css";
 import { FaGithub, FaLink } from "react-icons/fa";
-import React from "react";
+import React, { forwardRef } from "react";
 import Badge from "../Badge/Badge";
 
-function ProjectCard({
-  name,
-  description,
-  workedOn,
-  previewImg,
-  code,
-  hosted,
-}) {
+const ProjectCard = forwardRef((props, ref) => {
   return (
-    <div style={{ color: "white" }} className={`${styles.project_card}`}>
+    <div
+      ref={ref}
+      style={{ color: "white" }}
+      className={`${styles.project_card}`}
+    >
       <img
-        src={`${process.env.PUBLIC_URL}/assets/images/projects/${previewImg}`}
+        src={`${process.env.PUBLIC_URL}/assets/images/projects/${props.previewImg}`}
         className={`${styles.previewImg}`}
       />
-      <h4>{name}</h4>
-      <p>{description}</p>
+      <h4>{props.name}</h4>
+      <p>{props.description}</p>
       <div className={`${styles.tech_badges}`}>
-        {workedOn.map((tech, key) => {
+        {props.workedOn.map((tech, key) => {
           return <Badge key={key} text={tech} />;
         })}
       </div>
       <p>
-        {code != null && (
+        {props.code != null && (
           <FaGithub
             className={`${styles.project_link}`}
-            onClick={() => window.open(code)}
+            onClick={() => window.open(props.code)}
           />
         )}
-        {hosted != null && (
+        {props.hosted != null && (
           <FaLink
             className={`${styles.project_link}`}
-            onClick={() => window.open(hosted)}
+            onClick={() => window.open(props.hosted)}
           />
         )}
       </p>
     </div>
   );
-}
+});
 
 export default ProjectCard;
