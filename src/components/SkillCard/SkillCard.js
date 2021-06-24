@@ -7,7 +7,6 @@ const SkillCard = forwardRef((props, ref) => {
   let logosRef = new Array(props.logos.length);
 
   useEffect(() => {
-    console.log("SKILLC ARD");
     if (logosRef.length > 1) {
       let timeline = gsap.timeline({ repeat: -1 });
       for (let i = 0; i < logosRef.length; i++) {
@@ -29,6 +28,7 @@ const SkillCard = forwardRef((props, ref) => {
     }
 
     return () => {};
+    // eslint-disable-next-line
   }, []);
 
   return (

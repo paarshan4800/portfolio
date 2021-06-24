@@ -16,7 +16,7 @@ const SectionHeader = (props) => {
 
   const { title, icon } = SECTIONS[sections[props.name]];
   return (
-    <header className={`${styles.header} fadeIn`}>
+    <header className={`${styles.header}`}>
       <p className={`${styles.text}`}>
         {icon}&nbsp;{title}
       </p>

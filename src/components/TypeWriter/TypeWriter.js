@@ -1,12 +1,8 @@
 import styles from "./TypeWriter.module.css";
 
-import React, { useEffect, forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 const TypeWriter = forwardRef((props, ref) => {
-  useEffect(() => {
-    return () => {};
-  }, []);
-
   return (
     <div ref={ref} className={`${styles.writer_container}`}>
       <p className={`${styles.first_line}`}>

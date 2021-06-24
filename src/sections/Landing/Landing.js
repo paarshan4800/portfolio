@@ -50,7 +50,7 @@ const Landing = forwardRef((props, ref) => {
     // }
 
     // Simulate Pause for writer effect to finish
-    timeline.to({}, 4, {});
+    timeline.to({}, 3.2, {});
 
     // Social Icons
     for (let i = 0; i < iconRefs.length; i++) {
@@ -61,9 +61,9 @@ const Landing = forwardRef((props, ref) => {
       });
     }
 
-    // timeline.from();
 
     return () => {};
+    // eslint-disable-next-line
   }, []);
 
   return (

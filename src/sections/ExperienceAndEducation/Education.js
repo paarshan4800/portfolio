@@ -33,6 +33,8 @@ function Education() {
       // markers: true,
       scrub: 0.5,
     });
+
+    // eslint-disable-next-line
   }, []);
 
   return (

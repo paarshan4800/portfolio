@@ -41,7 +41,7 @@ function Contact() {
       sidenote: "The one where you tell me how I can contact you back",
     },
     {
-      type: "text",
+      type: "textarea",
       placeholder: "Hello mate!",
       heading: "Message",
       sidenote: "The one where you tell me what I can do for you",

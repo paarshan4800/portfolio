@@ -8,35 +8,17 @@ import { FiSun } from "react-icons/fi";
 import { HiDocument } from "react-icons/hi";
 
 import { Link } from "react-scroll";
+import ReactTooltip from "react-tooltip";
 
-import React, { useContext, useRef, useEffect } from "react";
-import { ThemeToggler, Theme, Width } from "../../App";
-import { gsap, Power3 } from "gsap";
+import React, { useContext } from "react";
+import { ThemeToggler, Theme } from "../../App";
 
 function Navbar() {
   const toggleTheme = useContext(ThemeToggler);
   const theme = useContext(Theme);
-  const width = useContext(Width);
-
-  let iconsRef = useRef(null);
-  let themeIconRef = useRef(null);
-
-  useEffect(() => {
-    return () => {};
-  }, []);
 
   const clickedBrand = () => {
-    if (width > 767) {
-      window.scrollTo(0, 0);
-    } else {
-      gsap.to([iconsRef, themeIconRef], {
-        duration: 10,
-        css: {
-          visibility: "visible",
-        },
-        ease: Power3.easeOut,
-      });
-    }
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -44,44 +26,44 @@ function Navbar() {
       <div onClick={clickedBrand} className={`${styles.brandContainer}`}>
         <p>PS</p>
       </div>
-      <div ref={(el) => (iconsRef = el)} className={`${styles.iconsContainer}`}>
+      <div className={`${styles.iconsContainer}`}>
         {/* Profile */}
-        <p>
+        <p data-tip="About Me">
           <Link activeClass="navLinkActive" to="profile" spy={true}>
             <FaUserAlt className={`${styles.icon}`} />
           </Link>
         </p>
 
         {/* Experience */}
-        <p>
+        <p data-tip="Experience">
           <Link activeClass="navLinkActive" to="experience" spy={true}>
             <MdWork className={`${styles.icon}`} />
           </Link>
         </p>
 
         {/* Education */}
-        <p>
+        <p data-tip="Education">
           <Link activeClass="navLinkActive" to="education" spy={true}>
             <FaUniversity className={`${styles.icon}`} />
           </Link>
         </p>
 
         {/* Skills */}
-        <p>
+        <p data-tip="Skills">
           <Link activeClass="navLinkActive" to="skills" spy={true}>
             <BiCodeCurly className={`${styles.icon}`} />
           </Link>
         </p>
 
         {/* Projects */}
-        <p>
+        <p data-tip="Projects">
           <Link activeClass="navLinkActive" to="projects" spy={true}>
             <FaDev className={`${styles.icon}`} />
           </Link>
         </p>
 
         {/* Extra Curricular and Hobbies */}
-        <p>
+        <p data-tip="Extra Curricular and Hobbies">
           <Link
             activeClass="navLinkActive"
             to="extra-curricular-hobbies"
@@ -92,23 +74,20 @@ function Navbar() {
         </p>
 
         {/* Resume */}
-        <p>
+        <p data-tip="Resume">
           <Link activeClass="navLinkActive" to="resume" spy={true}>
             <HiDocument className={`${styles.icon}`} />
           </Link>
         </p>
 
         {/* Contact */}
-        <p>
+        <p data-tip="Contact">
           <Link activeClass="navLinkActive" to="contact" spy={true}>
             <IoIosSend className={`${styles.icon}`} />
           </Link>
         </p>
       </div>
-      <div
-        ref={(el) => (themeIconRef = el)}
-        className={`${styles.themeIconContainer}`}
-      >
+      <div className={`${styles.themeIconContainer}`}>
         {theme === "dark" ? (
           <p>
             <FaMoon onClick={toggleTheme} />
@@ -119,6 +98,12 @@ function Navbar() {
           </p>
         )}
       </div>
+      <ReactTooltip
+        place="right"
+        type="dark"
+        effect="solid"
+        clickable="false"
+      />
     </div>
   );
 }

@@ -5,11 +5,7 @@ import Badge from "../Badge/Badge";
 
 const ProjectCard = forwardRef((props, ref) => {
   return (
-    <div
-      ref={ref}
-      style={{ color: "white" }}
-      className={`${styles.project_card}`}
-    >
+    <div ref={ref} className={`${styles.project_card}`}>
       <img
         src={`${process.env.PUBLIC_URL}/assets/images/projects/${props.previewImg}`}
         className={`${styles.previewImg}`}

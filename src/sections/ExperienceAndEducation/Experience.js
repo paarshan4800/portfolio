@@ -31,6 +31,7 @@ function Experience() {
       end: "center 50%",
       scrub: 0.5,
     });
+    // eslint-disable-next-line
   }, []);
 
   return (

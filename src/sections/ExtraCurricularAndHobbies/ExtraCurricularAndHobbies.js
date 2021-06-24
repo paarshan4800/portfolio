@@ -30,6 +30,7 @@ function ExtraCurricularAndHobbies() {
       end: "center 70%",
       scrub: 0.5,
     });
+    // eslint-disable-next-line
   }, []);
 
   return (
