@@ -6,7 +6,7 @@ import Button from "../../components/Button/Button";
 
 function Resume() {
   return (
-    <section className={`${styles.wrapper}`}>
+    <section name="resume" className={`${styles.wrapper}`}>
       <SectionHeader name={"resume"} />
       <div className={`${styles.content_wrapper}`}>
         <div className={`${styles.image_container}`}>

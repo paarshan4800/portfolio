@@ -1,4 +1,5 @@
 .project_card {
+  color: var(--text) !important;
 }
 
 .project_card > h4 {
@@ -22,15 +23,19 @@
   align-items: center;
   flex-wrap: wrap;
   margin: var(--mb-2) 0px;
+  color: var(--white);
 }
 
 .project_link {
   font-size: 1.5rem;
   margin-right: var(--mb-2);
+  cursor: pointer;
+  transition: 0.2s all;
 }
 
 .project_link:hover {
-  cursor: pointer;
+  transform: scale(1.1);
+  color: var(--secondary);
 }
 
 /* Media Queries */

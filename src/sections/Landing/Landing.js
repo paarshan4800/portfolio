@@ -1,12 +1,13 @@
 import styles from "./Landing.module.css";
 import { SocialIcon } from "react-social-icons";
 import NameHeader from "../../components/NameHeader/NameHeader";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import TypeWriter from "../../components/TypeWriter/TypeWriter";
+import { SOCIALICONS } from "../../data/SocialIcons";
 
 import { gsap, Power3 } from "gsap";
 
-function Landing() {
+const Landing = forwardRef((props, ref) => {
   let imageRef = useRef(null);
   let nameRef = useRef(null);
   let writerRef = useRef(null);
@@ -64,31 +65,9 @@ function Landing() {
 
     return () => {};
   }, []);
-  const socialIcons = [
-    {
-      url: "https://www.linkedin.com/in/paargav-shanker-b6708a194/",
-      network: "linkedin",
-    },
-    {
-      url: "https://github.com/paarshan4800",
-      network: "github",
-    },
-    {
-      url: "https://www.instagram.com/paar_shan4800/",
-      network: "instagram",
-    },
-    {
-      url: "https://twitter.com/paarshan4800",
-      network: "twitter",
-    },
-    {
-      url: "https://www.facebook.com/paargav.shuttle",
-      network: "facebook",
-    },
-  ];
 
   return (
-    <section className={`${styles.wrapper}`}>
+    <section ref={ref} className={`${styles.wrapper}`}>
       <div className={`${styles.image_container}`}>
         <img
           ref={(el) => (imageRef = el)}
@@ -101,7 +80,7 @@ function Landing() {
         <NameHeader ref={nameRef} />
         <TypeWriter ref={writerRef} />
         <div className={`${styles.social_icons_container}`}>
-          {socialIcons.map((icon, index) => {
+          {SOCIALICONS.map((icon, index) => {
             return (
               <div ref={(el) => (iconRefs[index] = el)} key={index}>
                 <SocialIcon
@@ -116,6 +95,6 @@ function Landing() {
       </div>
     </section>
   );
-}
+});
 
 export default Landing;

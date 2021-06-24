@@ -10,7 +10,7 @@
 }
 
 .content_wrapper {
-  border-left: 2px solid white;
+  border-left: 3px solid var(--backgroundText);
   padding-left: 30px;
 }
 
@@ -23,7 +23,7 @@
   display: block;
   width: 10px;
   height: 10px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   border-radius: 50%;
   border: 2px solid var(--primary);
   position: relative;

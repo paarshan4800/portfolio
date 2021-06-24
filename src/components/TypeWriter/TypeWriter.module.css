@@ -7,16 +7,16 @@
 }
 
 :root {
-  --bg-color: #121212;
+  --bg-color: var(--bg);
   --typewriterSpeed: 1s;
   --typewriterCharacters: 24;
 }
 
 .writer_container {
-  /* font-family: "Source Code Pro", monospace; */
   font-family: "Fira Code", monospace;
-  color: white;
+  color: var(--text);
   font-size: 14px;
+  /* font-weight: 600; */
   line-height: 1.5rem;
   text-align: center;
   margin: var(--mb-2) 0;

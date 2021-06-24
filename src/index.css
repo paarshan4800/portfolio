@@ -22,7 +22,7 @@
 
 /* Fonts */
 :root {
-  --primaryFont: "Montserrat";
+  --primaryFont: "Fira Sans", sans-serif;
   --stylishFont: "Tahu";
 }
 
@@ -91,7 +91,7 @@ section {
 body {
   font-family: var(--primaryFont);
   font-size: var(--normalFont);
-  color: var(--white);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

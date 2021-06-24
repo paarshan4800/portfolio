@@ -35,7 +35,7 @@ function Experience() {
   }, []);
 
   return (
-    <div ref={sectionRef} className={`${styles.half_wrapper}`}>
+    <div name="experience" ref={sectionRef} className={`${styles.half_wrapper}`}>
       <SectionHeader name={"experience"} />
       <div className={`${styles.content_wrapper}`}>
         {EXPERIENCES.map((exp, key) => {

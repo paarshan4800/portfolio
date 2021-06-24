@@ -34,7 +34,7 @@ function Skills() {
   }, []);
 
   return (
-    <section ref={sectionRef} className={`${styles.wrapper}`}>
+    <section name="skills" ref={sectionRef} className={`${styles.wrapper}`}>
       <SectionHeader name={"skills"} />
       <div className={`${styles.content_wrapper}`}>
         {SKILLS.map((skill, key) => {

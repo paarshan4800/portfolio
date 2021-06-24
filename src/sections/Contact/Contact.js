@@ -27,7 +27,7 @@ function Contact() {
   ];
 
   return (
-    <section className={`${styles.wrapper}`}>
+    <section name="contact" className={`${styles.wrapper}`}>
       <SectionHeader name={"contact"} />
       <div className={`${styles.content_wrapper}`}>
         <div className={`${styles.form_container}`}>

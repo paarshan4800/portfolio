@@ -1,0 +1,66 @@
+.navbarWrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconsContainer > p,
+.brandContainer > p,
+.themeIconContainer > p {
+  font-size: 1rem;
+  color: var(--text);
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+.iconsContainer > p:hover,
+.brandContainer > p:hover,
+.themeIconContainer > p:hover {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+.iconsContainer * {
+  margin: 10px 0px;
+}
+
+.brandContainer {
+  margin-top: 20px;
+}
+
+.brandContainer > p {
+  font-family: "brandFont";
+  font-size: 24px;
+  letter-spacing: 1.5px;
+}
+
+.themeIconContainer {
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+
+/* Both Tablet and Mobile */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Tablet only */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile only */
+@media only screen and (max-width: 767px) {
+}

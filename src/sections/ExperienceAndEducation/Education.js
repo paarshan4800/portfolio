@@ -37,6 +37,7 @@ function Education() {
 
   return (
     <div
+      name="education"
       ref={sectionRef}
       className={`${styles.half_wrapper} ${styles.education_wrapper}`}
     >

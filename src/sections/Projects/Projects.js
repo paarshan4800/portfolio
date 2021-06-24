@@ -29,13 +29,12 @@ function Projects() {
       animation: timeline,
       start: "top 80%",
       end: "center 70%",
-      markers: true,
       scrub: 0.5,
     });
   }, []);
 
   return (
-    <section ref={sectionRef} className={`${styles.wrapper}`}>
+    <section name="projects" ref={sectionRef} className={`${styles.wrapper}`}>
       <SectionHeader name={"projects"} />
       <div className={`${styles.content_wrapper} ${styles.scrollbar}`}>
         {PROJECTS.map((project, key) => {

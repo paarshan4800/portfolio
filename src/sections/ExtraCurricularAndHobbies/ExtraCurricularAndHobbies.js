@@ -7,7 +7,7 @@ import React from "react";
 
 function ExtraCurricularAndHobbies() {
   return (
-    <section className={`${styles.wrapper}`}>
+    <section name="extra-curricular-hobbies" className={`${styles.wrapper}`}>
       <SectionHeader name={"profile"} />
       <div className={`${styles.content_wrapper}`}>
         {EXTRACURRICULARANDHOBBIES.map((item, key) => {

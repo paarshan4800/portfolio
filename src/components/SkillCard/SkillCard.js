@@ -7,23 +7,24 @@ const SkillCard = forwardRef((props, ref) => {
   let logosRef = new Array(props.logos.length);
 
   useEffect(() => {
-    let timeline = gsap.timeline({ repeat: -1 });
+    if (logosRef.length > 1) {
+      let timeline = gsap.timeline({ repeat: -1 });
+      for (let i = 0; i < logosRef.length; i++) {
+        timeline.from(logosRef[i], {
+          duration: 0.3,
+          y: -20,
+          opacity: 0,
+          ease: Power3.easeOut,
+        });
 
-    for (let i = 0; i < logosRef.length; i++) {
-      timeline.from(logosRef[i], {
-        duration: 0.3,
-        y: -20,
-        opacity: 0,
-        ease: Power3.easeOut,
-      });
-
-      timeline.to(logosRef[i], {
-        duration: 0.5,
-        y: 20,
-        opacity: 0,
-        ease: Power3.easeOut,
-        delay: 2,
-      });
+        timeline.to(logosRef[i], {
+          duration: 0.3,
+          y: 20,
+          opacity: 0,
+          ease: Power3.easeOut,
+          delay: 1.5,
+        });
+      }
     }
 
     return () => {};
