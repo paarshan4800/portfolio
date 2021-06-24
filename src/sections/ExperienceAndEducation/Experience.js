@@ -29,13 +29,16 @@ function Experience() {
       animation: timeline,
       start: "top 80%",
       end: "center 50%",
-      // markers: true,
       scrub: 0.5,
     });
   }, []);
 
   return (
-    <div name="experience" ref={sectionRef} className={`${styles.half_wrapper}`}>
+    <div
+      name="experience"
+      ref={sectionRef}
+      className={`${styles.half_wrapper}`}
+    >
       <SectionHeader name={"experience"} />
       <div className={`${styles.content_wrapper}`}>
         {EXPERIENCES.map((exp, key) => {
@@ -49,6 +52,7 @@ function Experience() {
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/images/experience/${exp.logo}`}
                   className={`${styles.logo}`}
+                  alt={exp.organization}
                 />
                 <h4 className={`${styles.organization}`}>{exp.organization}</h4>
               </div>

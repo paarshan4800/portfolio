@@ -1,11 +1,10 @@
 import styles from "./ExtraCurricularAndHobbyCard.module.css";
-import { SocialIcon } from "react-social-icons";
 import { FaSpotify } from "react-icons/fa";
 import React, { forwardRef } from "react";
 
 const ExtraCurricularAndHobbyCard = forwardRef((props, ref) => {
   return (
-    <div className={`${styles.card}`}>
+    <div ref={ref} className={`${styles.card}`}>
       <img
         src={`${process.env.PUBLIC_URL}/assets/images/extra-curricular-hobbies/${props.image}`}
         className={`${styles.image}`}

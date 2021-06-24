@@ -1,7 +1,6 @@
 import styles from "./Profile.module.css";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
-import React, { useRef, useEffect, forwardRef } from "react";
-import { useIntersection } from "react-use";
+import React, { useRef, useEffect } from "react";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Profile = React.forwardRef((props, ref) => {
   let sectionRef = useRef(null);
-  let threshold = 0.5;
   let imageRef = useRef(null);
 
   useEffect(() => {
@@ -37,7 +35,7 @@ const Profile = React.forwardRef((props, ref) => {
             ref={(el) => (imageRef = el)}
             src={`${process.env.PUBLIC_URL}/assets/images/profile/profile_image.svg`}
             className={`${styles.profile_image} fadeIn`}
-            alt={"Profile Image"}
+            alt={"Profile Pic"}
           />
         </div>
         <div className={`${styles.text_container} fadeIn`}>

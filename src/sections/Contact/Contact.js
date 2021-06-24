@@ -1,10 +1,32 @@
 import styles from "./Contact.module.css";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import FormField from "../../components/FormField/FormField";
 import Button from "../../components/Button/Button";
+import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 function Contact() {
+  let sectionRef = useRef(null);
+  let imageRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(imageRef, {
+      scrollTrigger: {
+        trigger: sectionRef,
+        start: "25% 80%",
+        end: "50% 50%",
+        scrub: 0.5,
+      },
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      ease: Power3.easeOut,
+    });
+    return () => {};
+  }, []);
+
   const INPUTFIELDS = [
     {
       type: "text",
@@ -27,7 +49,11 @@ function Contact() {
   ];
 
   return (
-    <section name="contact" className={`${styles.wrapper}`}>
+    <section
+      ref={(el) => (sectionRef = el)}
+      name="contact"
+      className={`${styles.wrapper}`}
+    >
       <SectionHeader name={"contact"} />
       <div className={`${styles.content_wrapper}`}>
         <div className={`${styles.form_container}`}>
@@ -48,7 +74,9 @@ function Contact() {
         </div>
         <div className={`${styles.image_container}`}>
           <img
+            ref={(el) => (imageRef = el)}
             src={`${process.env.PUBLIC_URL}/assets/images/contact/contact.svg`}
+            alt={"contact_svg"}
           />
         </div>
       </div>

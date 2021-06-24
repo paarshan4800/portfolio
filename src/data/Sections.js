@@ -3,7 +3,6 @@ import { MdWork } from "react-icons/md";
 import { BiCodeCurly } from "react-icons/bi";
 import { AiFillTrophy } from "react-icons/ai";
 import { IoIosSend } from "react-icons/io";
-import { FiSun } from "react-icons/fi";
 import { HiDocument } from "react-icons/hi";
 
 import styles from "../components/SectionHeader/SectionHeader.module.css";

@@ -1,6 +1,5 @@
 import styles from "./NameHeader.module.css";
-import { ThemeToggler } from "../../App";
-import React, { useContext, forwardRef } from "react";
+import React, { forwardRef } from "react";
 
 const NameHeader = forwardRef((props, ref) => {
   return (

@@ -1,6 +1,6 @@
 import styles from "./SectionHeader.module.css";
 import { SECTIONS } from "../../data/Sections";
-import React, { forwardRef } from "react";
+import React from "react";
 
 const SectionHeader = (props) => {
   const sections = {

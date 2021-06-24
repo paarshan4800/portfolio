@@ -18,7 +18,6 @@ function Skills() {
       timeline.from(skillsRef[i], {
         duration: 0.5,
         opacity: 0,
-        // y: -50,
         ease: Power3.easeOut,
       });
     }
@@ -28,7 +27,6 @@ function Skills() {
       animation: timeline,
       start: "top 80%",
       end: "75% 70%",
-      // markers: true,
       scrub: 0.5,
     });
   }, []);
@@ -40,8 +38,8 @@ function Skills() {
         {SKILLS.map((skill, key) => {
           return (
             <SkillCard
-              ref={(el) => (skillsRef[key] = el)}
               key={key}
+              ref={(el) => (skillsRef[key] = el)}
               logos={skill.logos}
               name={skill.name}
               items={skill.items}

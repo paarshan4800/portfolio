@@ -60,20 +60,20 @@
 
 .writer_container > p:nth-child(1):before {
   animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 2s forwards;
+    steps(var(--typewriterCharacters)) 1.8s forwards;
 }
 
 .writer_container > p:nth-child(2)::before {
   animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 3s forwards;
+    steps(var(--typewriterCharacters)) 2.8s forwards;
 }
 
 .writer_container > p:nth-child(3)::before {
   animation: typewriter var(--typewriterSpeed)
-    steps(var(--typewriterCharacters)) 4s forwards;
+    steps(var(--typewriterCharacters)) 3.8s forwards;
 }
 .writer_container > p:nth-child(4)::before {
-  animation: typewriter 0.2s steps(var(--typewriterCharacters)) 5s forwards;
+  animation: typewriter 0.2s steps(var(--typewriterCharacters)) 4.8s forwards;
 }
 
 @keyframes typewriter {

@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useEffect } from "react";
+import React, { forwardRef, useEffect } from "react";
 import styles from "./SkillCard.module.css";
 
 import { gsap, Power3 } from "gsap";
@@ -7,6 +7,7 @@ const SkillCard = forwardRef((props, ref) => {
   let logosRef = new Array(props.logos.length);
 
   useEffect(() => {
+    console.log("SKILLC ARD");
     if (logosRef.length > 1) {
       let timeline = gsap.timeline({ repeat: -1 });
       for (let i = 0; i < logosRef.length; i++) {
@@ -36,6 +37,7 @@ const SkillCard = forwardRef((props, ref) => {
         {props.logos.map((logo, key) => {
           return (
             <img
+              key={key}
               ref={(el) => (logosRef[key] = el)}
               src={`${process.env.PUBLIC_URL}/assets/images/skills/${logo}`}
               className={`${styles.logo}`}
@@ -59,31 +61,5 @@ const SkillCard = forwardRef((props, ref) => {
     </div>
   );
 });
-
-// function SkillCard({ logos, name, items }) {
-//   return (
-//     <div className={`${styles.skill_card}`}>
-//       <div className={`${styles.logo_box}`}>
-//         <img
-//           src={`${process.env.PUBLIC_URL}/assets/images/skills/${logos[0]}`}
-//           className={`${styles.logo}`}
-//           alt={name}
-//         />
-//       </div>
-//       <div className={`${styles.content_box}`}>
-//         <h5>{name}</h5>
-//         <p>
-//           {items.map((item, key) => {
-//             return (
-//               <span key={key}>
-//                 {item}&nbsp;{key < items.length - 1 && <>&#47; </>}
-//               </span>
-//             );
-//           })}
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
 
 export default SkillCard;

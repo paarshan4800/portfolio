@@ -54,6 +54,7 @@ function Education() {
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/images/education/${edu.logo}`}
                   className={`${styles.logo}`}
+                  alt={edu.name}
                 />
                 <h4 className={`${styles.organization}`}>{edu.name}</h4>
               </div>

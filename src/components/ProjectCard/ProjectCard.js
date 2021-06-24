@@ -13,6 +13,7 @@ const ProjectCard = forwardRef((props, ref) => {
       <img
         src={`${process.env.PUBLIC_URL}/assets/images/projects/${props.previewImg}`}
         className={`${styles.previewImg}`}
+        alt={props.name}
       />
       <h4>{props.name}</h4>
       <p>{props.description}</p>

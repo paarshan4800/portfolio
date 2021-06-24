@@ -4,10 +4,10 @@ import { MdWork } from "react-icons/md";
 import { BiCodeCurly } from "react-icons/bi";
 import { AiFillTrophy } from "react-icons/ai";
 import { IoIosSend } from "react-icons/io";
-import { FiSun, FiActivity } from "react-icons/fi";
+import { FiSun } from "react-icons/fi";
 import { HiDocument } from "react-icons/hi";
 
-import { Link, animateScroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 import React, { useContext, useRef, useEffect } from "react";
 import { ThemeToggler, Theme, Width } from "../../App";
@@ -18,7 +18,6 @@ function Navbar() {
   const theme = useContext(Theme);
   const width = useContext(Width);
 
-  let brandRef = useRef(null);
   let iconsRef = useRef(null);
   let themeIconRef = useRef(null);
 
@@ -30,8 +29,6 @@ function Navbar() {
     if (width > 767) {
       window.scrollTo(0, 0);
     } else {
-      // iconsRef.style.visibility = "visible";
-      // themeIconRef.style.visibility = "visible";
       gsap.to([iconsRef, themeIconRef], {
         duration: 10,
         css: {
@@ -44,11 +41,7 @@ function Navbar() {
 
   return (
     <div className={`${styles.navbarWrapper}`}>
-      <div
-        ref={(el) => (brandRef = el)}
-        onClick={clickedBrand}
-        className={`${styles.brandContainer}`}
-      >
+      <div onClick={clickedBrand} className={`${styles.brandContainer}`}>
         <p>PS</p>
       </div>
       <div ref={(el) => (iconsRef = el)} className={`${styles.iconsContainer}`}>

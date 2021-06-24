@@ -11,7 +11,7 @@ const Landing = forwardRef((props, ref) => {
   let imageRef = useRef(null);
   let nameRef = useRef(null);
   let writerRef = useRef(null);
-  let iconRefs = [];
+  let iconRefs = new Array(SOCIALICONS.length);
 
   let timeline = gsap.timeline();
 

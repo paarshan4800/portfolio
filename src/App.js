@@ -1,4 +1,4 @@
-import { useState, createContext, useRef, useEffect } from "react";
+import { useState, createContext, useEffect } from "react";
 import "./App.css";
 import Cookies from "js-cookie";
 import Navbar from "./components/Navbar/Navbar";
@@ -21,11 +21,7 @@ export const Theme = createContext();
 export const Width = createContext();
 
 function App() {
-  let appRef = useRef(null);
-  let sectionRefs = new Array();
-
   useEffect(() => {
-    console.log("RERENDER");
     if (Cookies.get("theme") === undefined) {
       Cookies.set("theme", "dark");
     }
@@ -58,7 +54,7 @@ function App() {
         <ThemeToggler.Provider value={toggleTheme}>
           <Theme.Provider value={theme}>
             <Width.Provider value={width}>
-              <div ref={(el) => (appRef = el)} className="App">
+              <div className="App">
                 <Navbar />
                 <Landing />
                 <Profile />
