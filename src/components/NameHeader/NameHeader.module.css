@@ -7,17 +7,10 @@
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-}
-
-.landing_text {
   font-family: var(--stylishFont);
   font-size: calc(var(--normalFont) * 6) !important;
   text-align: center;
 }
-
-/* header {
-  padding: 0px;
-} */
 
 /* Media Queries */
 

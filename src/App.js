@@ -18,21 +18,32 @@ const StyledApp = styled.div``;
 
 export const ThemeToggler = createContext();
 export const Theme = createContext();
+export const Width = createContext();
 
 function App() {
   let appRef = useRef(null);
   let sectionRefs = new Array();
 
   useEffect(() => {
+    console.log("RERENDER");
     if (Cookies.get("theme") === undefined) {
       Cookies.set("theme", "dark");
     }
-
     setTheme(Cookies.get("theme"));
-    return () => {};
+
+    window.addEventListener("resize", updateWindowDimensions);
+
+    return () => {
+      window.addEventListener("resize", updateWindowDimensions);
+    };
   }, []);
 
   const [theme, setTheme] = useState();
+  const [width, setwidth] = useState(0);
+
+  const updateWindowDimensions = () => {
+    setwidth(window.innerWidth);
+  };
 
   const toggleTheme = () => {
     let temp = theme === "light" ? "dark" : "light";
@@ -46,18 +57,20 @@ function App() {
       <StyledApp>
         <ThemeToggler.Provider value={toggleTheme}>
           <Theme.Provider value={theme}>
-            <div ref={(el) => (appRef = el)} className="App">
-              <Navbar />
-              <Landing />
-              <Profile />
-              <ExperienceAndEducation />
-              <Skills />
-              <Projects />
-              <ExtraCurricularAndHobbies />
-              <Resume />
-              <Contact />
-              <Footer />
-            </div>
+            <Width.Provider value={width}>
+              <div ref={(el) => (appRef = el)} className="App">
+                <Navbar />
+                <Landing />
+                <Profile />
+                <ExperienceAndEducation />
+                <Skills />
+                <Projects />
+                <ExtraCurricularAndHobbies />
+                <Resume />
+                <Contact />
+                <Footer />
+              </div>
+            </Width.Provider>
           </Theme.Provider>
         </ThemeToggler.Provider>
       </StyledApp>
