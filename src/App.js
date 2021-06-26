@@ -28,6 +28,37 @@ export const LoaderState = createContext();
 
 toast.configure();
 function App() {
+  const [theme, setTheme] = useState();
+  const [width, setwidth] = useState(0);
+  const [loader, setloader] = useState(false);
+  const [imagesLoaded, setimagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadImage = () => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = `${process.env.PUBLIC_URL}/assets/images/landing/profile_paargav.png`;
+
+        loadImg.onload = () => {
+          resolve(
+            `${process.env.PUBLIC_URL}/assets/images/landing/profile_paargav.png`
+          );
+        };
+
+        loadImg.onerror = (err) => {
+          reject(err);
+        };
+      });
+    };
+
+    loadImage()
+      .then(() => {
+        setimagesLoaded(true);
+      })
+      .catch((err) => console.log("Failed to load images", err));
+    return () => {};
+  }, []);
+
   useEffect(() => {
     if (Cookies.get("theme") === undefined) {
       Cookies.set("theme", "dark");
@@ -40,10 +71,6 @@ function App() {
       window.addEventListener("resize", updateWindowDimensions);
     };
   }, []);
-
-  const [theme, setTheme] = useState();
-  const [width, setwidth] = useState(0);
-  const [loader, setloader] = useState(false);
 
   const updateWindowDimensions = () => {
     setwidth(window.innerWidth);
@@ -64,19 +91,38 @@ function App() {
             <Width.Provider value={width}>
               <SetLoader.Provider value={setloader}>
                 <LoaderState.Provider value={loader}>
-                  {loader && <Loader message={"Sending mail. Please wait 🙂"} />}
+                  {loader && (
+                    <Loader message={"Sending mail. Please wait 🙂"} />
+                  )}
+                  {!imagesLoaded && (
+                    <Loader message={"Awesomeness Loading 🙂"} />
+                  )}
+                  {/* {(loader || !imagesLoaded) &&
+                    (
+                      loader && (
+                        <Loader message={"Sending mail. Please wait 🙂"} />
+                      )
+                    )(
+                      !imagesLoaded && (
+                        <Loader message={"Awesomeness Loading 🙂"} />
+                      )
+                    )} */}
+
                   <div className="App" style={{ display: loader && "none" }}>
-                    {/* <Loader message={"Sending mail"} /> */}
-                    <Navbar />
-                    <Landing />
-                    <Profile />
-                    <ExperienceAndEducation />
-                    <Skills />
-                    <Projects />
-                    <ExtraCurricularAndHobbies />
-                    <Resume />
-                    <Contact />
-                    <Footer />
+                    {imagesLoaded && (
+                      <>
+                        <Navbar />
+                        <Landing />
+                        <Profile />
+                        <ExperienceAndEducation />
+                        <Skills />
+                        <Projects />
+                        <ExtraCurricularAndHobbies />
+                        <Resume />
+                        <Contact />
+                        <Footer />
+                      </>
+                    )}
                   </div>
                 </LoaderState.Provider>
               </SetLoader.Provider>

@@ -61,7 +61,6 @@ const Landing = forwardRef((props, ref) => {
       });
     }
 
-
     return () => {};
     // eslint-disable-next-line
   }, []);
