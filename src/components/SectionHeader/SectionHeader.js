@@ -9,7 +9,7 @@ const SectionHeader = (props) => {
     education: 2,
     skills: 3,
     projects: 4,
-    achievements: 5,
+    extra_curricular_hobbies: 5,
     resume: 6,
     contact: 7,
   };

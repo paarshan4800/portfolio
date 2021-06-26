@@ -1,12 +1,7 @@
 {
-  "short_name": "Paargav Shanker",
   "name": "Paargav Shanker",
+  "short_name": "Paargav Shanker",
   "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -18,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "start_url": "./public/assets/favicon/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

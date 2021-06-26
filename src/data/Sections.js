@@ -29,7 +29,7 @@ export const SECTIONS = [
     icon: <FaDev className={`${styles.sectionIcon}`} />,
   },
   {
-    title: "Achievements",
+    title: "Extra Curricular and Hobbies",
     icon: <AiFillTrophy className={`${styles.sectionIcon}`} />,
   },
   {

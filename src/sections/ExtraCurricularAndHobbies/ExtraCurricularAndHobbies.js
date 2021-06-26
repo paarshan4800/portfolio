@@ -39,7 +39,7 @@ function ExtraCurricularAndHobbies() {
       name="extra-curricular-hobbies"
       className={`${styles.wrapper}`}
     >
-      <SectionHeader name={"profile"} />
+      <SectionHeader name={"extra_curricular_hobbies"} />
       <div className={`${styles.content_wrapper}`}>
         {EXTRACURRICULARANDHOBBIES.map((item, key) => {
           return (

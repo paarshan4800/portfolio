@@ -71,7 +71,7 @@ const Landing = forwardRef((props, ref) => {
       <div className={`${styles.image_container}`}>
         <img
           ref={(el) => (imageRef = el)}
-          src={`${process.env.PUBLIC_URL}/assets/images/landing/circle_image.png`}
+          src={`${process.env.PUBLIC_URL}/assets/images/landing/profile_paargav.png`}
           className={`${styles.profile_image}`}
           alt={"Paargav Shanker"}
         />

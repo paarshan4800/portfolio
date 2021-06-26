@@ -1,5 +1,6 @@
 .wrapper {
   flex-direction: column;
+  align-items: center;
 }
 
 .content_wrapper {
@@ -7,6 +8,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 300px));
   justify-content: space-evenly !important;
-  /* column-gap: var(--mb-3);
-  row-gap: var(--mb-3); */
+  /* column-gap: var(--mb-3); */
+  row-gap: var(--mb-3);
 }
