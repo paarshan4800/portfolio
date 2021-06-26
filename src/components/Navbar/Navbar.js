@@ -102,7 +102,7 @@ function Navbar() {
         place="right"
         type="dark"
         effect="solid"
-        clickable="false"
+        clickable={false}
       />
     </div>
   );

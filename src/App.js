@@ -12,14 +12,21 @@ import Resume from "./sections/Resume/Resume";
 import ExtraCurricularAndHobbies from "./sections/ExtraCurricularAndHobbies/ExtraCurricularAndHobbies";
 import Footer from "./components/Footer/Footer";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes";
+import Loader from "./components/Loader/Loader";
 const StyledApp = styled.div``;
 
 export const ThemeToggler = createContext();
 export const Theme = createContext();
 export const Width = createContext();
+export const SetLoader = createContext();
+export const LoaderState = createContext();
 
+toast.configure();
 function App() {
   useEffect(() => {
     if (Cookies.get("theme") === undefined) {
@@ -36,6 +43,7 @@ function App() {
 
   const [theme, setTheme] = useState();
   const [width, setwidth] = useState(0);
+  const [loader, setloader] = useState(false);
 
   const updateWindowDimensions = () => {
     setwidth(window.innerWidth);
@@ -54,18 +62,24 @@ function App() {
         <ThemeToggler.Provider value={toggleTheme}>
           <Theme.Provider value={theme}>
             <Width.Provider value={width}>
-              <div className="App">
-                <Navbar />
-                <Landing />
-                <Profile />
-                <ExperienceAndEducation />
-                <Skills />
-                <Projects />
-                <ExtraCurricularAndHobbies />
-                <Resume />
-                <Contact />
-                <Footer />
-              </div>
+              <SetLoader.Provider value={setloader}>
+                <LoaderState.Provider value={loader}>
+                  {loader && <Loader message={"Sending mail. Please wait 🙂"} />}
+                  <div className="App" style={{ display: loader && "none" }}>
+                    {/* <Loader message={"Sending mail"} /> */}
+                    <Navbar />
+                    <Landing />
+                    <Profile />
+                    <ExperienceAndEducation />
+                    <Skills />
+                    <Projects />
+                    <ExtraCurricularAndHobbies />
+                    <Resume />
+                    <Contact />
+                    <Footer />
+                  </div>
+                </LoaderState.Provider>
+              </SetLoader.Provider>
             </Width.Provider>
           </Theme.Provider>
         </ThemeToggler.Provider>
