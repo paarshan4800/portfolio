@@ -33,6 +33,38 @@
 }
 .button_container {
   margin-top: var(--mb-2);
+  text-align: center;
+}
+
+/* OR Divider */
+
+.or_divider {
+  font-size: 14px;
+  color: var(--backgroundText);
+  overflow: hidden;
+  text-align: center;
+  margin: var(--mb-3) 0;
+}
+
+.or_divider:before,
+.or_divider:after {
+  background-color: var(--backgroundText);
+  content: "";
+  display: inline-block;
+  height: 0.01rem;
+  position: relative;
+  vertical-align: middle;
+  width: 10%;
+}
+
+.or_divider:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.or_divider:after {
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 /* Media Queries */
@@ -57,9 +89,5 @@
 
   .text_container {
     margin-top: var(--mb-2);
-  }
-
-  .button_container {
-    text-align: center;
   }
 }

@@ -5,6 +5,7 @@ import React, { useRef, useEffect } from "react";
 import Button from "../../components/Button/Button";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import QR from "../../components/QR/QR";
 
 gsap.registerPlugin(ScrollTrigger);
 function Resume() {
@@ -50,6 +51,12 @@ function Resume() {
           </p>
           <div className={`${styles.button_container}`}>
             <Button text={"Download Resume"} />
+          </div>
+          <p className={`${styles.or_divider}`} style={{ textAlign: "center" }}>
+            OR
+          </p>
+          <div>
+            <QR />
           </div>
         </div>
       </div>

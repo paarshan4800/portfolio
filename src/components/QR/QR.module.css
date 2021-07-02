@@ -1,0 +1,7 @@
+.qr_container {
+  text-align: center;
+}
+
+.qr_container > p {
+  margin-top: var(--mb-2);
+}
