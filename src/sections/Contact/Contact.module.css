@@ -26,6 +26,15 @@
 .image_container > img {
   width: 75%;
 }
+
+.recaptcha_container {
+  text-align: center;
+}
+
+.recaptcha {
+  display: inline-block !important;
+}
+
 /* Media Queries */
 
 /* Both Tablet and Mobile */

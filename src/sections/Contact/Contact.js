@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState, useContext } from "react";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import FormField from "../../components/FormField/FormField";
 import Button from "../../components/Button/Button";
+import ReCAPTCHA from "react-google-recaptcha";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SetLoader } from "../../App";
@@ -11,10 +12,12 @@ import {
   showSuccessToastNotification,
 } from "../../components/ToastNotification";
 import { apiSendMail } from "../../api/api";
+import { validateContactForm } from "../../validators/contactValidator";
 gsap.registerPlugin(ScrollTrigger);
 function Contact() {
   let sectionRef = useRef(null);
   let imageRef = useRef(null);
+  let reCaptchaRef = useRef(null);
 
   const setLoader = useContext(SetLoader);
 
@@ -66,6 +69,20 @@ function Contact() {
   ];
 
   const clickSubmit = async () => {
+    // Form Validation
+    let validation = validateContactForm(name, email, message);
+
+    if (validation.status === false) {
+      showErrorToastNotification(<p>🙄&nbsp;{validation.message}</p>);
+      return;
+    }
+
+    // reCaptcha Validation
+    if (reCaptchaRef.current.getValue() === "") {
+      showErrorToastNotification(<p>🙄&nbsp;reCaptcha verification failed</p>);
+      return;
+    }
+
     let scrollYPosition = window.scrollY;
 
     setLoader(true);
@@ -74,7 +91,10 @@ function Contact() {
       name: name,
       email: email,
       message: message,
+      recaptcha: reCaptchaRef.current.getValue(),
     });
+
+    reCaptchaRef.current.reset();
 
     setLoader(false);
 
@@ -96,6 +116,10 @@ function Contact() {
         showErrorToastNotification(<p>😑&nbsp;{resp.data.message}</p>);
       }
     }
+  };
+
+  const onCaptchaChange = (value) => {
+    console.log("Captcha value:", value);
   };
 
   return (
@@ -120,6 +144,16 @@ function Contact() {
               />
             );
           })}
+          <div className={`${styles.recaptcha_container}`}>
+            <ReCAPTCHA
+              sitekey="6LcPDXIbAAAAANRl2Vy2duy9bivoP9z83L4vh-1J"
+              onChange={onCaptchaChange}
+              theme="dark"
+              size="normal"
+              className={`${styles.recaptcha}`}
+              ref={reCaptchaRef}
+            />
+          </div>
           <div style={{ textAlign: "center" }}>
             <Button text={"Contact"} onClickMethod={clickSubmit} />
           </div>

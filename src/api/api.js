@@ -12,6 +12,7 @@ export const apiSendMail = async (data) => {
       email: data.email,
       name: data.name,
       message: data.message,
+      recaptcha: data.recaptcha,
     });
     return response;
   } catch (error) {
