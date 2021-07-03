@@ -80,15 +80,21 @@ function Contact() {
 
     window.scrollTo(0, scrollYPosition);
 
-    if (resp.status === 200) {
-      showSuccessToastNotification(<p>😄&nbsp;{resp.data.message}</p>);
-      setemail("");
-      setname("");
-      setmessage("");
-    } else if (resp.status >= 400 && resp.status < 500) {
-      showErrorToastNotification(<p>🙄&nbsp;{resp.data.message}</p>);
-    } else if (resp.status >= 500 && resp.status < 600) {
-      showErrorToastNotification(<p>😑&nbsp;{resp.data.message}</p>);
+    if (resp === undefined) {
+      showErrorToastNotification(
+        <p>😑&nbsp;Please try again after sometime</p>
+      );
+    } else {
+      if (resp.status === 200) {
+        showSuccessToastNotification(<p>😄&nbsp;{resp.data.message}</p>);
+        setemail("");
+        setname("");
+        setmessage("");
+      } else if (resp.status >= 400 && resp.status < 500) {
+        showErrorToastNotification(<p>🙄&nbsp;{resp.data.message}</p>);
+      } else if (resp.status >= 500 && resp.status < 600) {
+        showErrorToastNotification(<p>😑&nbsp;{resp.data.message}</p>);
+      }
     }
   };
 

@@ -5,7 +5,7 @@ import QRCode from "qrcode.react";
 function QR() {
   return (
     <div className={`${styles.qr_container}`}>
-      <QRCode value="https://www.google.com/" size={175} renderAs="svg" />
+      <QRCode value="https://www.google.com/" size={200} renderAs="svg" />
       <p>Scan this QR code to view my resume</p>
     </div>
   );

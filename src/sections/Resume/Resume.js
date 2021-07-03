@@ -28,6 +28,10 @@ function Resume() {
     return () => {};
   }, []);
 
+  const clickedDownloadResume = () => {
+    console.log("DOWNLOAD RESUME");
+  };
+
   return (
     <section
       ref={(el) => (sectionRef = el)}
@@ -50,7 +54,10 @@ function Resume() {
             of my information, you can download the trusted PDF version here
           </p>
           <div className={`${styles.button_container}`}>
-            <Button text={"Download Resume"} />
+            <Button
+              text={"Download Resume"}
+              onClickMethod={clickedDownloadResume}
+            />
           </div>
           <p className={`${styles.or_divider}`} style={{ textAlign: "center" }}>
             OR
