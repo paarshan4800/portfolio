@@ -81,3 +81,20 @@
     left: 100%;
   }
 }
+
+/* Media Queries */
+
+/* Both Tablet and Mobile */
+@media only screen and (max-width: 1023px) {
+}
+
+/* Tablet only */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile only */
+@media only screen and (max-width: 767px) {
+  .writer_container {
+    font-size: 12px;
+  }
+}
