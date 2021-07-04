@@ -1,35 +1,29 @@
-import { FaHeart } from "react-icons/fa";
-import { RiEmotionLaughLine } from "react-icons/ri";
 export const EXTRACURRICULARANDHOBBIES = [
   {
     title: "Badminton",
-    image: "badminton.svg",
+    image: "hobbies_1.svg",
     descriptions: [
       "Professional Badminton Player for 7 years",
-      "Secured First Place in Divisional Republic Day Sports & Games in 2015",
-      <p>
-        I've still got it <RiEmotionLaughLine style={{ marginBottom: "0" }} />
-      </p>,
+      "Secured First Place at Divisional Level (School)",
+      <p>I still play the game 😁</p>,
     ],
   },
 
   {
-    title: "Football",
-    image: "badminton.svg",
+    title: "Football and Formula 1",
+    image: "hobbies_2.png",
     descriptions: [
-      <p>
-        Avid Manchester United supporter <FaHeart style={{ color: "red" }} />{" "}
-        and Premier League follower.
-      </p>,
+      <p>Avid Manchester United 🔴 supporter and Premier League follower</p>,
+      <p>I have recently started to follow Formula One also</p>,
     ],
   },
 
   {
     title: "Music",
-    image: "music.svg",
+    image: "hobbies_3.png",
     descriptions: [
-      "My music taste ranges from Ilayaraja to AR Rahman",
-      "I also listen to Prateek Kuhaad songs",
+      "I listen to Tamil, Hindi and English songs mostly",
+      "The Lumineers, When Chai Met Toast and Prateek Kuhaad are few of my favorite bands and artists ❤️",
     ],
     url: "https://www.google.com/",
   },

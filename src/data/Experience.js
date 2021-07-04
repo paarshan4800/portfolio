@@ -1,7 +1,7 @@
 export const EXPERIENCES = [
   {
     organization: "Totallr",
-    logo: "csau.png",
+    logo: "company.png",
     duration: "Apr '21 - Present",
     role: "Web Developer Intern",
     workedIn: "Angular, Spring Boot",

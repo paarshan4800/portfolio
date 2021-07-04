@@ -8,7 +8,7 @@ export const EDUCATIONS = [
   },
   {
     name: "Sri Sowdambika M.H.S.S",
-    logo: "ceg.png",
+    logo: "school.png",
     duration: "2016 - 2018",
     degree: "Higher Secondary Education",
     location: "Virudhunagar, Tamil Nadu",
