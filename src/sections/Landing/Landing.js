@@ -4,7 +4,8 @@ import NameHeader from "../../components/NameHeader/NameHeader";
 import React, { useRef, useEffect, forwardRef } from "react";
 import TypeWriter from "../../components/TypeWriter/TypeWriter";
 import { SOCIALICONS } from "../../data/SocialIcons";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import { gsap, Power3 } from "gsap";
 
@@ -67,36 +68,58 @@ const Landing = forwardRef((props, ref) => {
   }, []);
 
   return (
-    <section ref={ref} className={`${styles.wrapper}`}>
-      <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
-      <div className={`${styles.image_container}`}>
-        <img
-          ref={(el) => (imageRef = el)}
-          src={`${process.env.PUBLIC_URL}/assets/images/landing/profile_paargav.png`}
-          className={`${styles.profile_image}`}
-          alt={"Paargav Shanker"}
+    <HelmetProvider>
+      <section ref={ref} className={`${styles.wrapper}`}>
+        <Helmet
+          meta={[
+            {
+              name: "description",
+              content:
+                "My name is Paargav Shanker. I am studying Computer Science and Engineering at College of Engineering, Guindy. This is my Portfolio.",
+            },
+            {
+              property: `og:title`,
+              content: "Paargav Shanker",
+            },
+            {
+              property: `og:description`,
+              content:
+                "My name is Paargav Shanker. I am studying Computer Science and Engineering at College of Engineering, Guindy. This is my Portfolio.",
+            },
+            {
+              property: `og:type`,
+              content: `website`,
+            },
+          ]}
         />
-      </div>
-      <div className={`${styles.profile_container}`}>
-        <NameHeader ref={nameRef} />
-        <TypeWriter ref={writerRef} />
-        <div className={`${styles.social_icons_container}`}>
-          {SOCIALICONS.map((icon, index) => {
-            return (
-              <div ref={(el) => (iconRefs[index] = el)} key={index}>
-                <SocialIcon
-                  network={icon.network}
-                  className={`${styles.social_icon}`}
-                  onClick={() => window.open(icon.url)}
-                />
-              </div>
-            );
-          })}
+
+        <div className={`${styles.image_container}`}>
+          <img
+            ref={(el) => (imageRef = el)}
+            src={`${process.env.PUBLIC_URL}/assets/images/landing/profile_paargav.png`}
+            className={`${styles.profile_image}`}
+            alt={"Paargav Shanker"}
+          />
         </div>
-      </div>
-    </section>
+        <div className={`${styles.profile_container}`}>
+          <NameHeader ref={nameRef} />
+          <TypeWriter ref={writerRef} />
+          <div className={`${styles.social_icons_container}`}>
+            {SOCIALICONS.map((icon, index) => {
+              return (
+                <div ref={(el) => (iconRefs[index] = el)} key={index}>
+                  <SocialIcon
+                    network={icon.network}
+                    className={`${styles.social_icon}`}
+                    onClick={() => window.open(icon.url)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </HelmetProvider>
   );
 });
 
