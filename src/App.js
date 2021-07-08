@@ -11,6 +11,7 @@ import Contact from "./sections/Contact/Contact";
 import Resume from "./sections/Resume/Resume";
 import ExtraCurricularAndHobbies from "./sections/ExtraCurricularAndHobbies/ExtraCurricularAndHobbies";
 import Footer from "./components/Footer/Footer";
+import SEO from "./components/SEO";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -91,22 +92,13 @@ function App() {
             <Width.Provider value={width}>
               <SetLoader.Provider value={setloader}>
                 <LoaderState.Provider value={loader}>
+                  <SEO />
                   {loader && (
                     <Loader message={"Sending mail. Please wait 🙂"} />
                   )}
                   {!imagesLoaded && (
                     <Loader message={"Awesomeness Loading 🙂"} />
                   )}
-                  {/* {(loader || !imagesLoaded) &&
-                    (
-                      loader && (
-                        <Loader message={"Sending mail. Please wait 🙂"} />
-                      )
-                    )(
-                      !imagesLoaded && (
-                        <Loader message={"Awesomeness Loading 🙂"} />
-                      )
-                    )} */}
 
                   <div className="App" style={{ display: loader && "none" }}>
                     {imagesLoaded && (
