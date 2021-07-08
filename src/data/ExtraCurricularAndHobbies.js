@@ -14,7 +14,7 @@ export const EXTRACURRICULARANDHOBBIES = [
     image: "hobbies_2.png",
     descriptions: [
       <p>Avid Manchester United 🔴 supporter and Premier League follower</p>,
-      <p>I have recently started to follow Formula One also</p>,
+      <p>I have recently started to follow Formula One 🏎️ also</p>,
     ],
   },
 

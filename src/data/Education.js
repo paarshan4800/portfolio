@@ -3,7 +3,7 @@ export const EDUCATIONS = [
     name: "College of Engineering, Guindy",
     logo: "ceg.png",
     duration: "2018 - Present",
-    degree: "Bachelor's Degree in Computer Science and Engineering Association",
+    degree: "Bachelor's Degree in Computer Science and Engineering",
     location: "Chennai, Tamil Nadu",
   },
   {
