@@ -31,7 +31,7 @@ export const EXPERIENCES = [
     organization: "Computer Society of Anna University",
     logo: "csau.png",
     duration: "Aug '20 - Present",
-    role: "Vice Director and Frontend Developer",
-    workedIn: "Angular",
+    role: "Student Director (Web and App)",
+    workedIn: "Angular, Bootstrap",
   },
 ];

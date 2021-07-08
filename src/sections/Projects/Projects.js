@@ -34,7 +34,7 @@ function Projects() {
       trigger: sectionRef.current,
       animation: timeline,
       start: "top 80%",
-      end: "300px 65%",
+      end: () => "+=" + contentWrapperRef.current.offsetHeight,
       scrub: 0.5,
     });
     // eslint-disable-next-line
@@ -51,6 +51,8 @@ function Projects() {
       );
       contentWrapperRef.current.classList.add(`${styles.grid_content}`);
     }
+
+    ScrollTrigger.refresh();
   };
 
   return (

@@ -53,4 +53,12 @@ export const PROJECTS = [
     code: "https://github.com/paarshan4800/weather-io",
     hosted: "https://paarshan4800.github.io/weather-io/weather",
   },
+  {
+    name: "Computer Society of Anna University Official Website",
+    description:
+      "Developed the events, articles and about us page using Angular for the official website of CSAU for the academic year 2020-21. Responsible for website maintenance.",
+    workedOn: ["Angular", "Bootstrap"],
+    previewImg: "csau.png",
+    hosted: "https://csau.in/",
+  },
 ];

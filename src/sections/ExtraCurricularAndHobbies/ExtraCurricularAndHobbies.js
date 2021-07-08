@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 function ExtraCurricularAndHobbies() {
   let sectionRef = useRef(null);
   let cardsRef = new Array(EXTRACURRICULARANDHOBBIES.length);
+  let contentWrapperRef = useRef(null);
 
   useEffect(() => {
     const timeline = gsap.timeline();
@@ -27,7 +28,7 @@ function ExtraCurricularAndHobbies() {
       trigger: sectionRef.current,
       animation: timeline,
       start: "top 80%",
-      end: "center 70%",
+      end: () => "+=" + contentWrapperRef.current.offsetHeight,
       scrub: 0.5,
     });
     // eslint-disable-next-line
@@ -40,7 +41,7 @@ function ExtraCurricularAndHobbies() {
       className={`${styles.wrapper}`}
     >
       <SectionHeader name={"extra_curricular_hobbies"} />
-      <div className={`${styles.content_wrapper}`}>
+      <div ref={contentWrapperRef} className={`${styles.content_wrapper}`}>
         {EXTRACURRICULARANDHOBBIES.map((item, key) => {
           return (
             <ExtraCurricularAndHobbyCard
