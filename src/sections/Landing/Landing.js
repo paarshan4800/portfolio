@@ -4,6 +4,7 @@ import NameHeader from "../../components/NameHeader/NameHeader";
 import React, { useRef, useEffect, forwardRef } from "react";
 import TypeWriter from "../../components/TypeWriter/TypeWriter";
 import { SOCIALICONS } from "../../data/SocialIcons";
+import { Helmet } from "react-helmet";
 
 import { gsap, Power3 } from "gsap";
 
@@ -67,6 +68,9 @@ const Landing = forwardRef((props, ref) => {
 
   return (
     <section ref={ref} className={`${styles.wrapper}`}>
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <div className={`${styles.image_container}`}>
         <img
           ref={(el) => (imageRef = el)}
