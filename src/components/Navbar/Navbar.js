@@ -23,7 +23,11 @@ function Navbar() {
 
   return (
     <div className={`${styles.navbarWrapper}`}>
-      <div onClick={clickedBrand} className={`${styles.brandContainer}`}>
+      <div
+        data-tip="Go to Top"
+        onClick={clickedBrand}
+        className={`${styles.brandContainer}`}
+      >
         <p>PS</p>
       </div>
       <div className={`${styles.iconsContainer}`}>
