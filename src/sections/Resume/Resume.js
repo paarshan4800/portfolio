@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import QR from "../../components/QR/QR";
+import { RESUME } from "../../data/Resume";
 
 gsap.registerPlugin(ScrollTrigger);
 function Resume() {
@@ -29,7 +30,7 @@ function Resume() {
   }, []);
 
   const clickedDownloadResume = () => {
-    console.log("DOWNLOAD RESUME");
+    window.open(RESUME);
   };
 
   return (
