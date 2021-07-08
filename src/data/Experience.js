@@ -1,5 +1,12 @@
 export const EXPERIENCES = [
   {
+    organization: "Dumbel",
+    logo: "dumbel.png",
+    duration: "Jun '21 - Present",
+    role: "Mobile App Developer",
+    workedIn: "Flutter",
+  },
+  {
     organization: "Totallr",
     logo: "company.png",
     duration: "Apr '21 - Present",
