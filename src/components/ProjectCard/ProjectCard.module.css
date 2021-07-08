@@ -14,6 +14,7 @@
 .previewImg {
   height: 150px;
   width: 100%;
+  border-radius: 5px;
 }
 
 .tech_badges {

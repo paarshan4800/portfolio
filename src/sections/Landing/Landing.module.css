@@ -39,7 +39,7 @@
   font-size: var(--normal-font-size);
   transition: 0.1s ease-in;
   cursor: pointer;
-  margin: 1rem 0.7rem;
+  margin: 1rem 0.5rem;
   height: 30px !important;
   width: 30px !important;
 }

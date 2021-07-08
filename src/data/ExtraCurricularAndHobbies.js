@@ -20,7 +20,7 @@ export const EXTRACURRICULARANDHOBBIES = [
 
   {
     title: "Music",
-    image: "hobbies_3.png",
+    image: "hobbies_3.svg",
     descriptions: [
       "I listen to Tamil, Hindi and English songs mostly",
       "The Lumineers, When Chai Met Toast and Prateek Kuhaad are few of my favorite bands and artists ❤️",

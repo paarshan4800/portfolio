@@ -6,6 +6,8 @@
   font-size: 1.3rem;
   padding: var(--mb-1);
   font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
 .sectionIcon {
