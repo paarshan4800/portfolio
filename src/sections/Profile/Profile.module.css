@@ -17,7 +17,6 @@
 
 .profile_image {
   width: 100%;
-  /* opacity: 0; */
 }
 
 .text_container {
@@ -26,6 +25,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   color: var(--text);
+  text-align: justify;
 }
 
 .text_container > p {

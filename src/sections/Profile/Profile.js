@@ -34,11 +34,11 @@ const Profile = React.forwardRef((props, ref) => {
           <img
             ref={(el) => (imageRef = el)}
             src={`${process.env.PUBLIC_URL}/assets/images/profile/profile_image.svg`}
-            className={`${styles.profile_image} fadeIn`}
+            className={`${styles.profile_image} `}
             alt={"Profile Pic"}
           />
         </div>
-        <div className={`${styles.text_container} fadeIn`}>
+        <div className={`${styles.text_container} `}>
           <p>Hey there! I am Paargav</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

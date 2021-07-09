@@ -91,7 +91,7 @@ function Navbar() {
           </Link>
         </p>
       </div>
-      <div className={`${styles.themeIconContainer}`}>
+      <div data-tip="Toggle Theme" className={`${styles.themeIconContainer}`}>
         {theme === "dark" ? (
           <p>
             <FaMoon onClick={toggleTheme} />
