@@ -31,7 +31,7 @@ export const SKILLS = [
   },
   {
     name: "Tools",
-    items: ["Git"],
-    logos: ["git.png"],
+    items: ["Git", "Figma"],
+    logos: ["git.png", "figma.png"],
   },
 ];

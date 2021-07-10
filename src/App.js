@@ -13,6 +13,8 @@ import ExtraCurricularAndHobbies from "./sections/ExtraCurricularAndHobbies/Extr
 import Footer from "./components/Footer/Footer";
 // import SEO from "./components/SEO";
 
+import { apiWakeUp } from "./api/api";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -61,6 +63,8 @@ function App() {
   }, []);
 
   useEffect(() => {
+    apiWakeUp();
+
     if (Cookies.get("theme") === undefined) {
       Cookies.set("theme", "dark");
     }
