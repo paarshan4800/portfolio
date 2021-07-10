@@ -1,5 +1,4 @@
 import axios from "axios";
-import dotenv from "dotenv";
 export const url_sendMail = "send-mail";
 export const url_wakeUp = "wake-up";
 

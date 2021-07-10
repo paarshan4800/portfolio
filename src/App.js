@@ -63,7 +63,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    apiWakeUp();
+    if (process.env.REACT_APP_ENV === "prod") {
+      apiWakeUp();
+    }
 
     if (Cookies.get("theme") === undefined) {
       Cookies.set("theme", "dark");
