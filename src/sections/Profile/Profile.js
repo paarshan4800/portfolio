@@ -3,6 +3,7 @@ import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import React, { useRef, useEffect } from "react";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { PROFILE } from "../../data/Profile";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,19 +40,9 @@ const Profile = React.forwardRef((props, ref) => {
           />
         </div>
         <div className={`${styles.text_container} `}>
-          <p>Hey there! I am Paargav</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          {PROFILE.map((content, key) => {
+            return <p key={key}>{content}</p>;
+          })}
         </div>
       </div>
     </section>

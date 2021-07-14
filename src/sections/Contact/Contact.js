@@ -118,10 +118,6 @@ function Contact() {
     }
   };
 
-  const onCaptchaChange = (value) => {
-    console.log("Captcha value:", value);
-  };
-
   return (
     <section
       ref={(el) => (sectionRef = el)}
@@ -147,7 +143,6 @@ function Contact() {
           <div className={`${styles.recaptcha_container}`}>
             <ReCAPTCHA
               sitekey="6LcPDXIbAAAAANRl2Vy2duy9bivoP9z83L4vh-1J"
-              onChange={onCaptchaChange}
               theme="dark"
               size="normal"
               className={`${styles.recaptcha}`}

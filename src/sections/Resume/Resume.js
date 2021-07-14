@@ -51,8 +51,8 @@ function Resume() {
         </div>
         <div className={`${styles.text_container}`}>
           <p>
-            To those HRs out there who need a more organized and minimal version
-            of my information, you can download the trusted PDF version here
+            If you want a more organized and minimal version
+            of my information, you can download the trusted PDF version of my resume here
           </p>
           <div className={`${styles.button_container}`}>
             <Button

@@ -38,7 +38,7 @@ export const PROJECTS = [
   {
     name: "Attendance Manager",
     description:
-      "Developed a web application where students can view their attendance details and faculties are provided with all CRUD functionalities regarding students’ attendance.",
+      "Developed a web application through which students can view their attendance details and faculties can mark and maintain attendance records of students.",
     workedOn: ["Angular", "Flask", "MySQL"],
     previewImg: "attendance_manager.png",
     code: "https://github.com/paarshan4800/Smart-Attendance-System",
@@ -56,7 +56,7 @@ export const PROJECTS = [
   {
     name: "Computer Society of Anna University Official Website",
     description:
-      "Developed the events, articles and about us page using Angular for the official website of CSAU for the academic year 2020-21. Responsible for website maintenance.",
+      "Developed the events, articles and about us page using Angular for the official website of CSAU for the academic year 2020-21 during my tenure as Vice Director. Responsible for website maintenance.",
     workedOn: ["Angular", "Bootstrap"],
     previewImg: "csau.png",
     hosted: "https://csau.in/",

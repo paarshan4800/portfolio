@@ -5,7 +5,7 @@ export const EXTRACURRICULARANDHOBBIES = [
     descriptions: [
       "Professional Badminton Player for 7 years",
       "Secured First Place at Divisional Level (School)",
-      <p>I still play the game 😁</p>,
+      <p>I still play the game 😄</p>,
     ],
   },
 
@@ -25,6 +25,6 @@ export const EXTRACURRICULARANDHOBBIES = [
       "I listen to Tamil, Hindi and English songs mostly",
       "The Lumineers, When Chai Met Toast and Prateek Kuhaad are few of my favorite bands and artists ❤️",
     ],
-    url: "https://www.google.com/",
+    url: "https://open.spotify.com/playlist/7xsinWs5At45dNCDWlJybk?si=b8cb4b51f48b421e",
   },
 ];
