@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     name: "Football Manager",
     description:
-      "Developed a desktop application which can be used by football managers to manage their team, and the transfer market.",
+      "A desktop application which can be used by football managers to manage their team, and the transfer market.",
     workedOn: ["Java AWT", "Swing", "JDBC"],
     previewImg: "football_manager.png",
     code: "https://github.com/paarshan4800/football-manager",
@@ -11,7 +11,7 @@ export const PROJECTS = [
   {
     name: "Car Paint Shop API",
     description:
-      "An API server for a car painting shop with admin protection, google authentication, two factor authentication and email verification.",
+      "A RESTful API for a car painting shop with admin protection, google authentication, two factor authentication and email verification.",
     workedOn: ["Python", "Flask", "PostgreSQL"],
     previewImg: "car_paint_shop.png",
     code: "https://github.com/paarshan4800/car-paint-shop",
@@ -20,7 +20,7 @@ export const PROJECTS = [
   {
     name: "Abacus'21",
     description:
-      "Developed the dashboard, navbar, landing page loader and many other components using React for the official website for the virtual edition of Abacus 2021, an intercollege technical symposium.",
+      "Played a major role in the Tech Team in developing the official website using React for the virtual edition of Abacus '21, an intercollege technical symposium.",
     workedOn: ["React", "CSS"],
     previewImg: "abacus_21.png",
     code: "https://github.com/paarshan4800/abacus-21-frontend",
@@ -29,7 +29,7 @@ export const PROJECTS = [
   {
     name: "Moviebase",
     description:
-      "Developed a web application where users can search and add movies of their choice to their liked list and can also view the most popular movies among other users.",
+      "A web application where users can search and add movies of their choice to their liked list and can also view the most popular movies among other users.",
     workedOn: ["Angular", "Bootstrap", "Django REST"],
     previewImg: "moviebase.png",
     code: "https://github.com/paarshan4800/Moviebase-Django",
@@ -38,7 +38,7 @@ export const PROJECTS = [
   {
     name: "Attendance Manager",
     description:
-      "Developed a web application through which students can view their attendance details and faculties can mark and maintain attendance records of students.",
+      "A web application through which students can view their attendance details and faculties can mark and maintain attendance records of students.",
     workedOn: ["Angular", "Flask", "MySQL"],
     previewImg: "attendance_manager.png",
     code: "https://github.com/paarshan4800/Smart-Attendance-System",
@@ -47,7 +47,7 @@ export const PROJECTS = [
   {
     name: "Weather.io",
     description:
-      "Developed a reesponsive Weather Report Web Application which displays daily, hourly weather forecasts of given location.",
+      "A responsive Weather Report Web Application which displays daily and hourly weather forecasts of given location.",
     workedOn: ["Angular", "Bootstrap"],
     previewImg: "weather_io.png",
     code: "https://github.com/paarshan4800/weather-io",
@@ -56,7 +56,7 @@ export const PROJECTS = [
   {
     name: "Computer Society of Anna University Official Website",
     description:
-      "Developed the events, articles and about us page using Angular for the official website of CSAU for the academic year 2020-21 during my tenure as Vice Director. Responsible for website maintenance.",
+      "Designed and developed a static website using Angular for the official website of CSAU for the academic year 2020-21 during my tenure as Vice Director.",
     workedOn: ["Angular", "Bootstrap"],
     previewImg: "csau.png",
     hosted: "https://csau.in/",
