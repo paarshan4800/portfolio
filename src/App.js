@@ -26,14 +26,11 @@ const StyledApp = styled.div``;
 export const ThemeToggler = createContext();
 export const Theme = createContext();
 export const Width = createContext();
-export const SetLoader = createContext();
-export const LoaderState = createContext();
 
 toast.configure();
 function App() {
   const [theme, setTheme] = useState();
   const [width, setwidth] = useState(0);
-  const [loader, setloader] = useState(false);
   const [imagesLoaded, setimagesLoaded] = useState(false);
 
   useEffect(() => {
@@ -96,34 +93,25 @@ function App() {
         <ThemeToggler.Provider value={toggleTheme}>
           <Theme.Provider value={theme}>
             <Width.Provider value={width}>
-              <SetLoader.Provider value={setloader}>
-                <LoaderState.Provider value={loader}>
-                  {/* <SEO /> */}
-                  {loader && (
-                    <Loader message={"Sending mail. Please wait 🙂"} />
-                  )}
-                  {!imagesLoaded && (
-                    <Loader message={"Awesomeness Loading 🙂"} />
-                  )}
+              {/* <SEO /> */}
+              {!imagesLoaded && <Loader message={"Awesomeness Loading 🙂"} />}
 
-                  <div className="App" style={{ display: loader && "none" }}>
-                    {imagesLoaded && (
-                      <>
-                        <Navbar />
-                        <Landing />
-                        <Profile />
-                        <ExperienceAndEducation />
-                        <Skills />
-                        <Projects />
-                        <ExtraCurricularAndHobbies />
-                        <Resume />
-                        <Contact />
-                        <Footer />
-                      </>
-                    )}
-                  </div>
-                </LoaderState.Provider>
-              </SetLoader.Provider>
+              <div className="App">
+                {imagesLoaded && (
+                  <>
+                    <Navbar />
+                    <Landing />
+                    <Profile />
+                    <ExperienceAndEducation />
+                    <Skills />
+                    <Projects />
+                    <ExtraCurricularAndHobbies />
+                    <Resume />
+                    <Contact />
+                    <Footer />
+                  </>
+                )}
+              </div>
             </Width.Provider>
           </Theme.Provider>
         </ThemeToggler.Provider>

@@ -10,6 +10,13 @@
 
 .form_container {
   flex-basis: 40%;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
   display: grid;
   grid-template-rows: auto;
   row-gap: var(--mb-2);
@@ -33,6 +40,10 @@
 
 .recaptcha {
   display: inline-block !important;
+}
+
+.loader_container {
+  margin: auto;
 }
 
 /* Media Queries */

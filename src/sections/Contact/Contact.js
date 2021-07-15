@@ -1,29 +1,29 @@
 import styles from "./Contact.module.css";
-import React, { useRef, useEffect, useState, useContext } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import FormField from "../../components/FormField/FormField";
 import Button from "../../components/Button/Button";
 import ReCAPTCHA from "react-google-recaptcha";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SetLoader } from "../../App";
 import {
   showErrorToastNotification,
   showSuccessToastNotification,
 } from "../../components/ToastNotification";
 import { apiSendMail } from "../../api/api";
 import { validateContactForm } from "../../validators/contactValidator";
+import SmallLoader from "../../components/SmallLoader/SmallLoader";
+import { set } from "js-cookie";
 gsap.registerPlugin(ScrollTrigger);
 function Contact() {
   let sectionRef = useRef(null);
   let imageRef = useRef(null);
   let reCaptchaRef = useRef(null);
 
-  const setLoader = useContext(SetLoader);
-
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [message, setmessage] = useState("");
+  const [loader, setloader] = useState(false);
 
   useEffect(() => {
     gsap.from(imageRef, {
@@ -69,6 +69,9 @@ function Contact() {
   ];
 
   const clickSubmit = async () => {
+    setloader(true);
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    return;
     // Form Validation
     let validation = validateContactForm(name, email, message);
 
@@ -83,9 +86,7 @@ function Contact() {
       return;
     }
 
-    let scrollYPosition = window.scrollY;
-
-    setLoader(true);
+    setloader(true);
 
     const resp = await apiSendMail({
       name: name,
@@ -96,9 +97,7 @@ function Contact() {
 
     reCaptchaRef.current.reset();
 
-    setLoader(false);
-
-    window.scrollTo(0, scrollYPosition);
+    setloader(false);
 
     if (resp === undefined) {
       showErrorToastNotification(
@@ -127,30 +126,40 @@ function Contact() {
       <SectionHeader name={"contact"} />
       <div className={`${styles.content_wrapper}`}>
         <div className={`${styles.form_container}`}>
-          {INPUTFIELDS.map((field, key) => {
-            return (
-              <FormField
-                key={key}
-                type={field.type}
-                placeholder={field.placeholder}
-                heading={field.heading}
-                sidenote={field.sidenote}
-                state={field.state}
-                setter={field.setter}
+          {loader && (
+            <div className={`${styles.loader_container}`}>
+              <SmallLoader message={"Sending your message. Please wait 💬"} />
+            </div>
+          )}
+          <div
+            style={{ display: loader && "none" }}
+            className={`${styles.form}`}
+          >
+            {INPUTFIELDS.map((field, key) => {
+              return (
+                <FormField
+                  key={key}
+                  type={field.type}
+                  placeholder={field.placeholder}
+                  heading={field.heading}
+                  sidenote={field.sidenote}
+                  state={field.state}
+                  setter={field.setter}
+                />
+              );
+            })}
+            <div className={`${styles.recaptcha_container}`}>
+              <ReCAPTCHA
+                sitekey="6LcPDXIbAAAAANRl2Vy2duy9bivoP9z83L4vh-1J"
+                theme="dark"
+                size="normal"
+                className={`${styles.recaptcha}`}
+                ref={reCaptchaRef}
               />
-            );
-          })}
-          <div className={`${styles.recaptcha_container}`}>
-            <ReCAPTCHA
-              sitekey="6LcPDXIbAAAAANRl2Vy2duy9bivoP9z83L4vh-1J"
-              theme="dark"
-              size="normal"
-              className={`${styles.recaptcha}`}
-              ref={reCaptchaRef}
-            />
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <Button text={"Contact"} onClickMethod={clickSubmit} />
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <Button text={"Contact"} onClickMethod={clickSubmit} />
+            </div>
           </div>
         </div>
         <div className={`${styles.image_container}`}>
