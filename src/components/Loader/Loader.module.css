@@ -11,45 +11,89 @@
 }
 
 .loader_text {
+  color: var(--text);
   font-size: 1.3rem;
+  margin-top: 100px;
 }
 
-.bouncer {
+.loader {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: flex-end;
-  width: 100px;
-  height: 50px;
-  margin-bottom: var(--mb-3);
+  width: 60px;
+  height: 60px;
+  transform: rotate(45deg);
+  animation: rot-ld 1.5s ease-in-out infinite;
 }
-
-.bouncer div {
-  width: 20px;
-  height: 20px;
-  background-color: var(--primary);
-  border-radius: 50%;
-  animation: bouncerAnimation 0.4s ease infinite alternate;
+.loader div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 4px solid #333;
+  width: 100%;
+  height: 100%;
 }
-
-.bouncer div:nth-child(1) {
-  background-color: var(--secondary);
+.loader div:nth-child(1) {
+  animation: div-1 1.5s ease-in-out infinite;
 }
-
-.bouncer div:nth-child(2) {
-  animation-delay: 0.1s;
-  opacity: 1;
+.loader div:nth-child(2) {
+  animation: div-2 1.5s ease-in-out infinite;
 }
-
-.bouncer div:nth-child(3) {
-  animation-delay: 0.2s;
-  background-color: var(--secondary);
+.loader div:nth-child(3) {
+  animation: div-3 1.5s ease-in-out infinite;
 }
-
-@keyframes bouncerAnimation {
-  from {
-    transform: translateY(0);
+.loader div:nth-child(4) {
+  animation: div-4 1.5s ease-in-out infinite;
+}
+@keyframes div-1 {
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  to {
-    transform: translateY(-50px);
+  50% {
+    transform: translateY(-60px);
+    border-color: var(--primary);
+  }
+}
+@keyframes div-2 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(60px);
+    border-color: var(--secondary);
+  }
+}
+@keyframes div-3 {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(60px);
+    border-color: var(--primary);
+  }
+}
+@keyframes div-4 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-60px);
+    border-color: var(--secondary);
+  }
+}
+@keyframes rot-ld {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(225deg);
   }
 }
