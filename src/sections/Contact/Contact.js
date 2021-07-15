@@ -13,7 +13,6 @@ import {
 import { apiSendMail } from "../../api/api";
 import { validateContactForm } from "../../validators/contactValidator";
 import SmallLoader from "../../components/SmallLoader/SmallLoader";
-import { set } from "js-cookie";
 gsap.registerPlugin(ScrollTrigger);
 function Contact() {
   let sectionRef = useRef(null);
@@ -69,9 +68,6 @@ function Contact() {
   ];
 
   const clickSubmit = async () => {
-    setloader(true);
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-    return;
     // Form Validation
     let validation = validateContactForm(name, email, message);
 
