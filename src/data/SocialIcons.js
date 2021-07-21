@@ -20,7 +20,7 @@ export const SOCIALICONS = [
     network: "facebook",
   },
   {
-    url: "https://mail.google.com/mail/u/0/?fs=1&to=paargav.shuttle@gmail.com&su=Contacting+after+seeing+Portfolio&tf=cm",
+    url: "https://mail.google.com/mail/u/0/?fs=1&to=paarshan4800@gmail.com&su=Contacting+after+seeing+Portfolio&tf=cm",
     network: "email",
   },
 ];

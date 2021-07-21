@@ -79,7 +79,7 @@ const Landing = forwardRef((props, ref) => {
             },
             {
               property: `og:title`,
-              content: "Paargav Shanker",
+              content: "Paargav Shanker's Portfolio",
             },
             {
               property: `og:description`,

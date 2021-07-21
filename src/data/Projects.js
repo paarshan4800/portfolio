@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     name: "Football Manager",
     description:
-      "A desktop application which can be used by football managers to manage their team, and the transfer market.",
+      "A desktop application which can be used by football managers to manage their team and the transfer market.",
     workedOn: ["Java AWT", "Swing", "JDBC"],
     previewImg: "football_manager.png",
     code: "https://github.com/paarshan4800/football-manager",
@@ -47,7 +47,7 @@ export const PROJECTS = [
   {
     name: "Weather.io",
     description:
-      "A responsive Weather Report Web Application which displays daily and hourly weather forecasts of given location.",
+      "A responsive Weather Report Web Application which displays daily and hourly weather forecasts of the given location.",
     workedOn: ["Angular", "Bootstrap"],
     previewImg: "weather_io.png",
     code: "https://github.com/paarshan4800/weather-io",
