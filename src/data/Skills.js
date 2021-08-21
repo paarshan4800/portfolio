@@ -25,11 +25,6 @@ export const SKILLS = [
     logos: ["mysql.png", "oracle.png"],
   },
   {
-    name: "Platform",
-    items: ["Windows", "Ubuntu"],
-    logos: ["windows.png", "ubuntu.png"],
-  },
-  {
     name: "Tools",
     items: ["Git", "Figma"],
     logos: ["git.png", "figma.png"],
