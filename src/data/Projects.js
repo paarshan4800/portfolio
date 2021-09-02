@@ -3,7 +3,7 @@ export const PROJECTS = [
     name: "Football Manager",
     description:
       "A desktop application which can be used by football managers to manage their team and the transfer market.",
-    workedOn: ["Java AWT", "Swing", "JDBC"],
+    workedOn: ["Java AWT", "Swing", "JDBC", "MySQL"],
     previewImg: "football_manager.png",
     code: "https://github.com/paarshan4800/football-manager",
     hosted: null,
@@ -36,12 +36,12 @@ export const PROJECTS = [
     hosted: null,
   },
   {
-    name: "Attendance Manager",
+    name: "Student Attendance Manager",
     description:
-      "A web application through which students can view their attendance details and faculties can mark and maintain attendance records of students.",
-    workedOn: ["Angular", "Flask", "MySQL"],
+      "An Attendance Management System through which students can view their attendance details and faculties can mark and maintain attendance records of students.",
+    workedOn: ["Flask", "jQuery", "Bootstrap" ,"Oracle DB"],
     previewImg: "attendance_manager.png",
-    code: "https://github.com/paarshan4800/Smart-Attendance-System",
+    code: "https://github.com/paarshan4800/student-attendance-manager",
     hosted: null,
   },
   {
