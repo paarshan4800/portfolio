@@ -9,7 +9,7 @@ const TypeWriter = forwardRef((props, ref) => {
         <span>const</span> paargav: Array&lt;<span>Ingredients</span>&gt; = [
       </p>
       <p className={`${styles.second_line}`}>
-        <span>Undergrad</span>, <span>Developer</span>,
+        <span>Undergrad</span>, <span>Software Engineer</span>,
       </p>
       <p className={`${styles.third_line}`}>
         <span>Sugar</span>, <span>Spice</span>, ...<span>everythingNice</span>,

@@ -6,6 +6,9 @@
 .content_wrapper {
   display: grid;
   column-gap: var(--mb-5);
+  grid-template-columns: repeat(100, minmax(275px, 320px));
+  width: 95%;
+  overflow-x: auto;
 }
 
 .content_wrapper::-webkit-scrollbar-track {

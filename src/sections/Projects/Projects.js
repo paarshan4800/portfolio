@@ -14,12 +14,12 @@ function Projects() {
   let projectsRef = new Array(PROJECTS.length);
   let contentWrapperRef = useRef(null);
 
-  const [projectsView, setprojectsView] = useState("horizontal");
+  const [projectsView, setprojectsView] = useState("grid");
 
   let timeline = gsap.timeline();
 
   useEffect(() => {
-    contentWrapperRef.current.classList.add(`${styles.horizontal_content}`);
+    // contentWrapperRef.current.classList.add(`${styles.horizontal_content}`);
 
     for (let i = 0; i < projectsRef.length; i++) {
       timeline.from(projectsRef[i], {
@@ -58,7 +58,7 @@ function Projects() {
   return (
     <section name="projects" ref={sectionRef} className={`${styles.wrapper}`}>
       <SectionHeader name={"projects"} />
-      <div className={`${styles.view_container}`}>
+      {/* <div className={`${styles.view_container}`}>
         <span>
           <MdViewCarousel
             className={`${styles.view_icon}`}
@@ -77,9 +77,9 @@ function Projects() {
             }}
           />
         </span>
-      </div>
+      </div> */}
 
-      <div ref={contentWrapperRef} className={`${styles.content_wrapper}`}>
+      <div ref={contentWrapperRef} className={`${styles.content_wrapper} ${styles.grid_content}`}>
         {PROJECTS.map((project, key) => {
           return (
             <ProjectCard

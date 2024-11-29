@@ -1,17 +1,24 @@
 export const EXPERIENCES = [
   {
+    organization: "Wells Fargo",
+    logo: "wellsfargo.png",
+    duration: "Jul '22 - Present",
+    role: "Software Engineer",
+    workedIn: "React, SpringBoot, Microservices, Microfrontends",
+  },
+  {
     organization: "Totallr Technologies",
     logo: "totallr.png",
-    duration: "Apr '21 - Jul '21",
+    duration: "Apr '21 - Jun '21",
     role: "Full Stack Web Developer",
     workedIn: "Angular, Spring Boot, AWS S3",
   },
   {
     organization: "CEG Tech Forum",
     logo: "ctf.png",
-    duration: "Jan '21 - Apr '21",
-    role: "Organizer and Frontend Developer",
-    workedIn: "React",
+    duration: "Dec '21 - Jun '22",
+    role: "Student Director of Technical Operations",
+    workedIn: "React, ExpressJS, AWS",
   },
   {
     organization: "Computer Science and Engineering Association, CEG",
@@ -23,8 +30,8 @@ export const EXPERIENCES = [
   {
     organization: "Computer Society of Anna University",
     logo: "csau.png",
-    duration: "Aug '20 - Present",
-    role: "Student Director (Web and App)",
-    workedIn: "Angular, Bootstrap",
+    duration: "Jun '21 - Jun '22",
+    role: "Student Director",
+    workedIn: "Angular",
   },
 ];
