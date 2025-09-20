@@ -1,5 +1,23 @@
 export const PROJECTS = [
   {
+    name: "FinAdvisor",
+    description:
+      "A Python-based agentic AI app using Flask and LangChain for viewing user transactions with insights and recommendations.",
+    workedOn: ["Python", "Langchain", "OpenAI", "MongoDB"],
+    previewImg: "fin_advisor.png",
+    code: "https://github.com/paarshan4800/fin-advisor",
+    hosted: null,
+  },
+  {
+    name: "Go-Workers",
+    description:
+      "A resilient distributed task queue in Go with Redis backend, featuring a configurable goroutine-based worker pool,",
+    workedOn: ["Go", "Redis", "Gin"],
+    previewImg: "go_worknq.png",
+    code: "https://github.com/paarshan4800/go-worknq",
+    hosted: null,
+  },
+  {
     name: "Football Manager",
     description:
       "A desktop application which can be used by football managers to manage their team and the transfer market.",
@@ -15,7 +33,7 @@ export const PROJECTS = [
     workedOn: ["Python", "Flask", "PostgreSQL"],
     previewImg: "car_paint_shop.png",
     code: "https://github.com/paarshan4800/car-paint-shop",
-    hosted: "https://car-paint-shop.herokuapp.com/",
+    // hosted: "https://car-paint-shop.herokuapp.com/",
   },
   {
     name: "Abacus'21",
@@ -39,20 +57,20 @@ export const PROJECTS = [
     name: "Student Attendance Manager",
     description:
       "An Attendance Management System through which students can view their attendance details and faculties can mark and maintain attendance records of students.",
-    workedOn: ["Flask", "jQuery", "Bootstrap" ,"Oracle DB"],
+    workedOn: ["Flask", "jQuery", "Bootstrap", "Oracle DB"],
     previewImg: "attendance_manager.png",
     code: "https://github.com/paarshan4800/student-attendance-manager",
     hosted: null,
   },
-  {
-    name: "Weather.io",
-    description:
-      "A responsive Weather Report Web Application which displays daily and hourly weather forecasts of the given location.",
-    workedOn: ["Angular", "Bootstrap"],
-    previewImg: "weather_io.png",
-    code: "https://github.com/paarshan4800/weather-io",
-    hosted: "https://paarshan4800.github.io/weather-io/weather",
-  },
+  // {
+  //   name: "Weather.io",
+  //   description:
+  //     "A responsive Weather Report Web Application which displays daily and hourly weather forecasts of the given location.",
+  //   workedOn: ["Angular", "Bootstrap"],
+  //   previewImg: "weather_io.png",
+  //   code: "https://github.com/paarshan4800/weather-io",
+  //   hosted: "https://paarshan4800.github.io/weather-io/weather",
+  // },
   {
     name: "Computer Society of Anna University Official Website",
     description:

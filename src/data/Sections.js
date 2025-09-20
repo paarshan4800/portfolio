@@ -4,6 +4,7 @@ import { BiCodeCurly } from "react-icons/bi";
 import { AiFillTrophy } from "react-icons/ai";
 import { IoIosSend } from "react-icons/io";
 import { HiDocument } from "react-icons/hi";
+import { RiTeamFill } from "react-icons/ri";
 
 import styles from "../components/SectionHeader/SectionHeader.module.css";
 
@@ -19,6 +20,10 @@ export const SECTIONS = [
   {
     title: "Education",
     icon: <FaUniversity className={`${styles.sectionIcon}`} />,
+  },
+  {
+    title: "Volunteer Experience and Leadership",
+    icon: <RiTeamFill className={`${styles.sectionIcon}`} />,
   },
   {
     title: "Skills",

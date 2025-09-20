@@ -7,11 +7,12 @@ const SectionHeader = (props) => {
     profile: 0,
     experience: 1,
     education: 2,
-    skills: 3,
-    projects: 4,
-    extra_curricular_hobbies: 5,
-    resume: 6,
-    contact: 7,
+    volunteer_experience: 3,
+    skills: 4,
+    projects: 5,
+    extra_curricular_hobbies: 6,
+    resume: 7,
+    contact: 8,
   };
 
   const { title, icon } = SECTIONS[sections[props.name]];

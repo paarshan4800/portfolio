@@ -6,30 +6,30 @@ import { gsap, Power3 } from "gsap";
 const SkillCard = forwardRef((props, ref) => {
   let logosRef = new Array(props.logos.length);
 
-  useEffect(() => {
-    if (logosRef.length > 1) {
-      let timeline = gsap.timeline({ repeat: -1 });
-      for (let i = 0; i < logosRef.length; i++) {
-        timeline.from(logosRef[i], {
-          duration: 0.3,
-          y: -20,
-          opacity: 0,
-          ease: Power3.easeOut,
-        });
+  // useEffect(() => {
+  //   if (logosRef.length > 1) {
+  //     let timeline = gsap.timeline({ repeat: -1 });
+  //     for (let i = 0; i < logosRef.length; i++) {
+  //       timeline.from(logosRef[i], {
+  //         duration: 0.3,
+  //         y: -20,
+  //         opacity: 0,
+  //         ease: Power3.easeOut,
+  //       });
 
-        timeline.to(logosRef[i], {
-          duration: 0.3,
-          y: 20,
-          opacity: 0,
-          ease: Power3.easeOut,
-          delay: 1.5,
-        });
-      }
-    }
+  //       timeline.to(logosRef[i], {
+  //         duration: 0.3,
+  //         y: 20,
+  //         opacity: 0,
+  //         ease: Power3.easeOut,
+  //         delay: 1.5,
+  //       });
+  //     }
+  //   }
 
-    return () => {};
-    // eslint-disable-next-line
-  }, []);
+  //   return () => {};
+  //   // eslint-disable-next-line
+  // }, []);
 
   return (
     <div ref={ref} className={`${styles.skill_card}`}>

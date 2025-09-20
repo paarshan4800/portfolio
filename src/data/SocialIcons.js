@@ -8,6 +8,10 @@ export const SOCIALICONS = [
     network: "github",
   },
   {
+    url: "https://mail.google.com/mail/u/0/?fs=1&to=paarshan4800@gmail.com&su=Contacting+after+seeing+Portfolio&tf=cm",
+    network: "email",
+  },
+  {
     url: "https://www.instagram.com/paar_shan4800/",
     network: "instagram",
   },
@@ -18,9 +22,5 @@ export const SOCIALICONS = [
   {
     url: "https://www.facebook.com/paargav.shuttle",
     network: "facebook",
-  },
-  {
-    url: "https://mail.google.com/mail/u/0/?fs=1&to=paarshan4800@gmail.com&su=Contacting+after+seeing+Portfolio&tf=cm",
-    network: "email",
   },
 ];

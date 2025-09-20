@@ -21,7 +21,8 @@ function Footer() {
         })}
       </div>
       <div className={`${styles.text_container}`}>
-        <p>Copyright 2021 Paargav Shanker</p>
+        <p>Copyright {new Date().getFullYear()} Paargav Shanker</p>
+
         <p>
           Made with <FaHeart style={{ color: "red" }} /> in Chennai, India
         </p>

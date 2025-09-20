@@ -6,6 +6,7 @@ import { AiFillTrophy } from "react-icons/ai";
 import { IoIosSend } from "react-icons/io";
 import { FiSun } from "react-icons/fi";
 import { HiDocument } from "react-icons/hi";
+import { RiTeamFill } from "react-icons/ri";
 
 import { Link } from "react-scroll";
 import ReactTooltip from "react-tooltip";
@@ -52,6 +53,13 @@ function Navbar() {
           </Link>
         </p>
 
+        {/* Volunteer Experience */}
+        <p data-tip="Volunteer Experience">
+          <Link activeClass="navLinkActive" to="volunteer_experience" spy={true}>
+            <RiTeamFill className={`${styles.icon}`} />
+          </Link>
+        </p>
+
         {/* Skills */}
         <p data-tip="Skills">
           <Link activeClass="navLinkActive" to="skills" spy={true}>
@@ -67,7 +75,7 @@ function Navbar() {
         </p>
 
         {/* Extra Curricular and Hobbies */}
-        <p data-tip="Extra Curricular and Hobbies">
+        {/* <p data-tip="Extra Curricular and Hobbies">
           <Link
             activeClass="navLinkActive"
             to="extra-curricular-hobbies"
@@ -75,7 +83,7 @@ function Navbar() {
           >
             <AiFillTrophy className={`${styles.icon}`} />
           </Link>
-        </p>
+        </p> */}
 
         {/* Resume */}
         <p data-tip="Resume">

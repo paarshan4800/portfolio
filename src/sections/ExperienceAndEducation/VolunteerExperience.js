@@ -1,15 +1,15 @@
 import styles from "./ExperienceAndEducation.module.css";
-import { EXPERIENCES } from "../../data/Experience";
 import React, { useRef, useEffect } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { VOLUNTEER_EXPERIENCES } from "../../data/VolunteerExperiences";
 
 gsap.registerPlugin(ScrollTrigger);
-function Experience() {
-  let experiencesRef = new Array(EXPERIENCES.length);
+function VolunteerExperience() {
+  let experiencesRef = new Array(VOLUNTEER_EXPERIENCES.length);
   let sectionRef = useRef(null);
 
   useEffect(() => {
@@ -36,13 +36,13 @@ function Experience() {
 
   return (
     <div
-      name="experience"
+      name="volunteer_experience"
       ref={sectionRef}
       className={`${styles.half_wrapper}`}
     >
-      <SectionHeader name={"experience"} />
+      <SectionHeader name={"volunteer_experience"} />
       <div className={`${styles.content_wrapper}`}>
-        {EXPERIENCES.map((exp, key) => {
+        {VOLUNTEER_EXPERIENCES.map((exp, key) => {
           return (
             <div
               ref={(el) => (experiencesRef[key] = el)}
@@ -61,10 +61,10 @@ function Experience() {
               <p className={`${styles.secondary_info}`}>
                 <FaCalendarAlt /> {exp.duration}
               </p>
-              <p className={`${styles.secondary_info}`}>
+              {exp.hasOwnProperty("workedIn") && <p className={`${styles.secondary_info}`}>
                 <span style={{ fontWeight: "900" }}>Worked in:</span>{" "}
                 {exp.workedIn}
-              </p>
+              </p>}
               {exp.highlights && exp.highlights.length > 0 && (
                 <ul className={`${styles.highlights}`}>
                   {exp.highlights.map((point, idx) => (
@@ -80,4 +80,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default VolunteerExperience;

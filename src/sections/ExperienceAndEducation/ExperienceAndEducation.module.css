@@ -1,12 +1,15 @@
 .wrapper {
-  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;              /* allow items to wrap into new row */
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
 /* Common for both Experience and Education */
 .half_wrapper {
   flex-direction: column;
-  width: 45%;
+  width: 50%;                   /* two items per row */
+  margin-bottom: 30px;          /* spacing between rows */
 }
 
 .content_wrapper {
@@ -54,6 +57,18 @@
 
 .secondary_info {
   font-size: 13px !important;
+}
+
+.highlights {
+  margin-top: 8px;
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--textSecondary);
+}
+
+.highlights li {
+  margin-bottom: 5px;
+  list-style-type: disc;
 }
 
 /* Media Queries */

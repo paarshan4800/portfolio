@@ -105,7 +105,7 @@ function App() {
                     <ExperienceAndEducation />
                     <Skills />
                     <Projects />
-                    <ExtraCurricularAndHobbies />
+                    {/* <ExtraCurricularAndHobbies /> */}
                     <Resume />
                     <Contact />
                     <Footer />
