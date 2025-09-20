@@ -9,7 +9,7 @@ function Loader({ message }) {
         <div></div>
         <div></div>
       </div>
-      {message && <p className={`${styles.loader_text}`}>{message}</p>}
+      {/* {message && <p className={`${styles.loader_text}`}>{message}</p>} */}
     </div>
   );
 }
