@@ -93,11 +93,11 @@ function Navbar() {
         </p>
 
         {/* Contact */}
-        <p data-tip="Contact">
+        {/* <p data-tip="Contact">
           <Link activeClass="navLinkActive" to="contact" spy={true}>
             <IoIosSend className={`${styles.icon}`} />
           </Link>
-        </p>
+        </p> */}
       </div>
       <div data-tip="Toggle Theme" className={`${styles.themeIconContainer}`}>
         {theme === "dark" ? (
